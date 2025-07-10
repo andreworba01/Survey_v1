@@ -5,6 +5,6 @@ plotly
 joblib
 seaborn
 matplotlib
-
+scikit-learn
 
 
