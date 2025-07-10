@@ -6,5 +6,5 @@ joblib
 seaborn
 matplotlib
 scikit-learn
-
+tensorflow
 
