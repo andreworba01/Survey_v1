@@ -1,8 +1,8 @@
 streamlit
 pandas
 numpy
+tensorflow
 plotly
+joblib
 seaborn
 matplotlib
-joblib
-tensorflow
