@@ -17,7 +17,7 @@ df_map = pd.read_csv("Nebraska_County_Simulated_Scores.csv")
 df_scores = pd.read_csv("Exposure_with_Quartiles.csv")
 
 # Load the trained MLP model
-model = joblib.load("Survey/mlp_model.pkl")
+model = joblib.load("mlp_model.pkl")
 
 # App title
 st.title("🧪 Microplastic Exposure Risk Estimator")
