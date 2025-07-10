@@ -8,16 +8,16 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
 
-scaler = joblib.load("/content/drive/MyDrive/Survey/fitted_scaler.pkl")
+scaler = joblib.load("fitted_scaler.pkl")
 
 # Load simulated data
-df_map = pd.read_csv("/content/drive/MyDrive/Survey/Nebraska_County_Simulated_Scores.csv")
+df_map = pd.read_csv("Nebraska_County_Simulated_Scores.csv")
 
 # Load the dataset with quartiles
-df_scores = pd.read_csv("/content/drive/MyDrive/Survey/Exposure_with_Quartiles.csv")
+df_scores = pd.read_csv("Exposure_with_Quartiles.csv")
 
 # Load the trained MLP model
-model = joblib.load("/content/drive/MyDrive/Survey/mlp_model.pkl")
+model = joblib.load("Survey/mlp_model.pkl")
 
 # App title
 st.title("🧪 Microplastic Exposure Risk Estimator")
