@@ -12,13 +12,13 @@ import plotly.express as px
 
 
 # --- Load model and scaler ---
-model = joblib.load("/content/drive/MyDrive/Survey/mlp_model.pkl")
-scaler = joblib.load("/content/drive/MyDrive/Survey/fitted_scaler.pkl")
+model = joblib.load("mlp_model.pkl")
+scaler = joblib.load("fitted_scaler.pkl")
 class_names = ["High", "High‑Medium", "Medium", "Low‑Medium", "Low"]
 
 # --- Load Data ---
-df_scores = pd.read_csv("/content/drive/MyDrive/Survey/Exposure_with_Quartiles.csv")
-df_map = pd.read_csv("/content/drive/MyDrive/Survey/Nebraska_County_Simulated_Scores.csv")
+df_scores = pd.read_csv("Exposure_with_Quartiles.csv")
+df_map = pd.read_csv("Nebraska_County_Simulated_Scores.csv")
 
 # --- Sidebar Navigation ---
 page = st.sidebar.radio("📑 Select View", ["📊 Individual Risk Prediction", "🗺️ County Risk Map"])
