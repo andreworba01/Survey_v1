@@ -14,7 +14,7 @@ import plotly.express as px
 # --- Load model and scaler ---
 
 # Load the trained MLP model
-model = joblib.load("/content/drive/MyDrive/Survey/mlp_model.pkl")
+model = joblib.load("mlp_model.pkl")
 
 scaler = joblib.load("fitted_scaler.pkl")
 class_names = ["High", "High‑Medium", "Medium", "Low‑Medium", "Low"]
