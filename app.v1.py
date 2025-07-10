@@ -9,12 +9,12 @@ import matplotlib.pyplot as plt
 import io
 import plotly.graph_objects as go
 import plotly.express as px
-from tensorflow.keras.models import load_model
+
 
 # --- Load model and scaler ---
 
 # Load your Keras model
-model = load_model("mlp_model.pkl")
+model = joblib.load("your_model.pkl")
 scaler = joblib.load("fitted_scaler.pkl")
 class_names = ["High", "High‑Medium", "Medium", "Low‑Medium", "Low"]
 
