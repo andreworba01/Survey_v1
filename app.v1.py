@@ -1,189 +1,162 @@
-
+# streamlit_app.py
 import streamlit as st
 import pandas as pd
-import plotly.express as px
-import joblib
 import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-import io
 import plotly.graph_objects as go
 import plotly.express as px
+import json
+from urllib.request import urlopen
 
+# ================================
+# 1) Manual scale & thresholds
+# ================================
+ORDER = ["Low", "Mid", "Mid-High", "High", "Very High"]
 
-# --- Load model and scaler ---
+THRESHOLDS = {
+    "p10": 1.0000, "p35": 1.2533, "p50": 1.3740, "p70": 1.5380,
+    "p90": 1.8686, "p95": 2.2911, "p99": 2.5193
+}
 
-# Load the trained MLP model
-model = joblib.load("mlp_model.pkl")
+def categorize(score, t=THRESHOLDS):
+    """Manual 5-band classifier."""
+    if score <= t["p35"]:
+        return "Low"
+    elif score <= t["p70"]:
+        return "Mid"
+    elif score <= t["p90"]:
+        return "Mid-High"
+    elif score <= t["p99"]:
+        return "High"
+    else:
+        return "Very High"
 
-scaler = joblib.load("fitted_scaler.pkl")
-class_names = ["High", "High‑Medium", "Medium", "Low‑Medium", "Low"]
+# Weights for Q73..Q80 (in this order)
+W = np.array([0.05, 0.07, 0.064, 0.16, 0.228, 0.153, 0.138, 0.137])
 
-# --- Load Data ---
+# ================================
+# 2) Load data
+# ================================
 df_scores = pd.read_csv("Exposure_with_Quartiles.csv")
 df_map = pd.read_csv("Nebraska_County_Simulated_Scores.csv")
 
-# --- Sidebar Navigation ---
-page = st.sidebar.radio("📑 Select View", ["📊 Individual Risk Prediction", "🗺️ County Risk Map"])
+# pick the score column to show in the histogram
+SCORE_COL = "Weighted_Score" if "Weighted_Score" in df_scores.columns else (
+    "Total_Exposure_Score" if "Total_Exposure_Score" in df_scores.columns else "Exposure_Score"
+)
 
-# -------------------------
-# 🧪 PAGE 1: Prediction
-# -------------------------
-if page == "📊 Individual Risk Prediction":
-    st.title("🧪 Microplastic Exposure Risk Estimator")
-    st.write("Answer questions 73–80 to predict your exposure category.")
+# ================================
+# 3) Sidebar
+# ================================
+page = st.sidebar.radio("📑 Select View", ["📊 Individual Risk (Manual Scale)", "🗺️ County Risk Map"])
 
-    # Collect answers for questions 73 to 80
-    q1 = st.selectbox("73. How many ounces of bottled water do you drink each day, on average?", [
-        "Over 50.8 ounces", "34-50.7 ounces", "17-33.9 ounces", "1-16.9 ounces", "Less than 1 ounce"])
-    q2 = st.selectbox("74. How many ounces of water do you typically drink each day from refillable plastic water bottles?", [
-        "Over 96 ounces", "65-96 ounces", "33-64 ounces", "1-32 ounces", "Less than 1 ounce"])
-    q3 = st.selectbox("75. How many ounces of other beverages (juice, soda, sports drinks, etc.) do you typically drink each day from plastic packaging?", [
-        "Over 40 ounces", "20-40 ounces", "1-19 ounces", "Less than 1 ounce"])
-    q4 = st.selectbox("76. How often, on average each day, do you use disposable cups for hot drinks (e.g., tea, coffee)?", [
-        "5 or more times per day", "3-4 times per day", "1-2 times per day", "Less than 1 time per day", "Never"])
-    q5 = st.selectbox("77. How often, on average each day, do you use a microwave to heat water or beverages in a disposable cup?", [
-        "5 or more times per day", "3-4 times per day", "1-2 times per day", "Less than 1 time per day", "Never"])
-    q6 = st.selectbox("78. During the summer, how often each week do you leave bottled water in a car or under direct sunlight for over 30 minutes?", [
-        "5 or more days per week", "3-4 days per week", "1-2 days per week", "Never"])
-    q7 = st.selectbox("79. During the summer, how often each week do you leave refillable plastic water bottles in a car or under direct sunlight?", [
-        "5 or more days per week", "3-4 days per week", "1-2 days per week", "Never"])
-    q8 = st.selectbox("80. During the summer, how often each week do you leave other beverages with plastic packaging in a car or under direct sunlight?", [
-        "5 or more days per week", "3-4 days per week", "1-2 days per week", "Never"])
+# ================================
+# 4) PAGE 1 — Individual
+# ================================
+if page == "📊 Individual Risk (Manual Scale)":
+    st.title("🧪 Microplastic Exposure Risk (Manual Scale)")
+    st.caption(
+        "Weighted score = 0.05·Q73 + 0.07·Q74 + 0.064·Q75 + 0.16·Q76 + "
+        "0.228·Q77 + 0.153·Q78 + 0.138·Q79 + 0.137·Q80"
+    )
+    st.markdown(
+        f"**Percentile thresholds** used for categories: "
+        f"p35={THRESHOLDS['p35']:.4f}, p70={THRESHOLDS['p70']:.4f}, "
+        f"p90={THRESHOLDS['p90']:.4f}, p99={THRESHOLDS['p99']:.4f}."
+    )
 
-    # ---- Map Answers to Numerical Values ----
+    # ---- Questions (same text, manual mapping) ----
+    q1 = st.selectbox("73. How many ounces of bottled water do you drink each day, on average?",
+        ["Over 50.8 ounces", "34-50.7 ounces", "17-33.9 ounces", "1-16.9 ounces", "Less than 1 ounce"])
+    q2 = st.selectbox("74. How many ounces of water do you typically drink each day from refillable plastic water bottles?",
+        ["Over 96 ounces", "65-96 ounces", "33-64 ounces", "1-32 ounces", "Less than 1 ounce"])
+    q3 = st.selectbox("75. How many ounces of other beverages (juice, soda, sports drinks, etc.) do you typically drink each day from plastic packaging?",
+        ["Over 40 ounces", "20-40 ounces", "1-19 ounces", "Less than 1 ounce"])
+    q4 = st.selectbox("76. How often, on average each day, do you use disposable cups for hot drinks (e.g., tea, coffee)?",
+        ["5 or more times per day", "3-4 times per day", "1-2 times per day", "Less than 1 time per day", "Never"])
+    q5 = st.selectbox("77. How often, on average each day, do you use a microwave to heat water or beverages in a disposable cup?",
+        ["5 or more times per day", "3-4 times per day", "1-2 times per day", "Less than 1 time per day", "Never"])
+    q6 = st.selectbox("78. During the summer, how often each week do you leave bottled water in a car or under direct sunlight for over 30 minutes?",
+        ["5 or more days per week", "3-4 days per week", "1-2 days per week", "Never"])
+    q7 = st.selectbox("79. During the summer, how often each week do you leave refillable plastic water bottles in a car or under direct sunlight?",
+        ["5 or more days per week", "3-4 days per week", "1-2 days per week", "Never"])
+    q8 = st.selectbox("80. During the summer, how often each week do you leave other beverages with plastic packaging in a car or under direct sunlight?",
+        ["5 or more days per week", "3-4 days per week", "1-2 days per week", "Never"])
+
+    # ---- Map answers to numeric (higher = riskier) ----
     map_5pt = {
-        # Q73
-        "Over 50.8 ounces": 5,
-        "34-50.7 ounces": 4,
-        "17-33.9 ounces": 3,
-        "1-16.9 ounces": 2,
-        "Less than 1 ounce": 1,
-        
-        # Q74
-        "Over 96 ounces": 5,
-        "65-96 ounces": 4,
-        "33-64 ounces": 3,
-        "1-32 ounces": 2,
-        "Less than 1 ounce": 1,
-
-        # Q76/Q77
-        "5 or more times per day": 5,
-        "3-4 times per day": 4,
-        "1-2 times per day": 3,
-        "Less than 1 time per day": 2,
-        "Never": 1
+        "Over 50.8 ounces": 5, "34-50.7 ounces": 4, "17-33.9 ounces": 3, "1-16.9 ounces": 2, "Less than 1 ounce": 1,
+        "Over 96 ounces": 5, "65-96 ounces": 4, "33-64 ounces": 3, "1-32 ounces": 2, "Less than 1 ounce": 1,
+        "5 or more times per day": 5, "3-4 times per day": 4, "1-2 times per day": 3, "Less than 1 time per day": 2, "Never": 1
     }
     map_4pt = {
-        "Over 40 ounces": 4,
-        "20-40 ounces": 3,
-        "1-19 ounces": 2,
-        "Less than 1 ounce": 1,
-        "5 or more days per week": 4,
-        "3-4 days per week": 3,
-        "1-2 days per week": 2,
-        "Never": 1
+        "Over 40 ounces": 4, "20-40 ounces": 3, "1-19 ounces": 2, "Less than 1 ounce": 1,
+        "5 or more days per week": 4, "3-4 days per week": 3, "1-2 days per week": 2, "Never": 1
     }
 
-    # Convert selections to numbers
-    responses = [
-        map_5pt[q1],
-        map_5pt[q2],
-        map_4pt[q3],
-        map_5pt[q4],
-        map_5pt[q5],
-        map_4pt[q6],
-        map_4pt[q7],
-        map_4pt[q8]
-    ]
+    responses = np.array([
+        map_5pt[q1], map_5pt[q2], map_4pt[q3], map_5pt[q4],
+        map_5pt[q5], map_4pt[q6], map_4pt[q7], map_4pt[q8]
+    ], dtype=float)
 
-# ---- Predict on Button Click ----
-    if st.button("🔍 Predict Exposure Category"):
-        responses = [
-            map_5pt[q1], map_5pt[q2], map_4pt[q3], map_5pt[q4],
-            map_5pt[q5], map_4pt[q6], map_4pt[q7], map_4pt[q8]
-        ]
-        # Scale and predict
-        X_input_scaled = scaler.transform([responses])
-        probs = model.predict(X_input_scaled)[0]
-        predicted_class_idx = int(np.argmax(probs))
-        predicted_class = class_names[predicted_class_idx]
-        st.success(f"🧬 Your predicted microplastic exposure category is: **{predicted_class}**")
+    if st.button("🔍 Compute Weighted Score & Category"):
+        user_score = float(np.dot(responses, W))  # <- MANUAL weighted score
+        user_cat = categorize(user_score)
 
-        # Sum up user's exposure score
-        user_score = sum(responses)
-        st.subheader("📊 Your Score Compared to the Population")
+        st.success(f"🧮 Weighted score: **{user_score:.3f}**  →  **{user_cat}**")
 
-        
-            # Create histogram trace
+        # --- Distribution with user's score ---
+        hist_x = df_scores[SCORE_COL].dropna()
+        # histogram trace
         hist_trace = go.Histogram(
-            x=df_scores['Total_Exposure_Score'],
-            nbinsx=30,
-            marker=dict(color='mediumpurple', line=dict(color='black', width=1)),
-            opacity=0.7,
-            name='Population Scores'
+            x=hist_x, nbinsx=30,
+            marker=dict(color="#6ce5e8", line=dict(color="black", width=1)),
+            opacity=0.7, name="Population"
         )
-
-        # Add vertical line for the user's score
+        # vertical line at user's score
+        ymax = np.histogram(hist_x, bins=30)[0].max()
         line_trace = go.Scatter(
-            x=[user_score, user_score],
-            y=[0, df_scores['Total_Exposure_Score'].value_counts().max()],
+            x=[user_score, user_score], y=[0, ymax],
             mode="lines+text",
-            name=f"Your Score: {user_score}",
+            name=f"Your score: {user_score:.3f}",
             line=dict(color="crimson", width=3, dash="dash"),
-            text=[f"Your Score: {user_score}"],
-            textposition="top right"
+            text=[f"Your score: {user_score:.3f}"], textposition="top right"
         )
-
-        # Combine both traces
-        fig = go.Figure(data=[hist_trace, line_trace])
-
-        # Customize layout
+        fig = go.Figure([hist_trace, line_trace])
         fig.update_layout(
-            title="📊 Distribution of Exposure Scores in the Population",
-            xaxis_title="Exposure Score",
-            yaxis_title="Count",
-            template="plotly_white",
-            legend=dict(x=0.7, y=0.95),
-            hovermode="x"
+            title="📊 Distribution of Weighted Scores",
+            xaxis_title="Weighted Score", yaxis_title="Count",
+            template="plotly_white", hovermode="x", legend=dict(x=0.7, y=0.95)
         )
-
-        # Show in Streamlit
         st.plotly_chart(fig, use_container_width=True)
 
-        # Optional percentile
-        percentile = (df_scores['Exposure_Score'] < user_score).mean() * 100
-        st.markdown(f"🔢 Your score of **{user_score}** is higher than **{percentile:.1f}%** of the population surveyed in Nebraska.")
+        # percentile vs population
+        pct = (hist_x < user_score).mean() * 100
+        st.markdown(f"🔢 Your score is higher than **{pct:.1f}%** of the population in the dataset.")
 
-# -------------------------
-# 🗺️ PAGE 2: Nebraska Map
-# -------------------------
+# ================================
+# 5) PAGE 2 — County Map
+# ================================
 elif page == "🗺️ County Risk Map":
-    st.title("🗺️ Simulated Microplastic Exposure Score by Nebraska County")
+    st.title("🗺️ Nebraska County — Mean Weighted Score (Manual Scale)")
 
-    import json
-    from urllib.request import urlopen
+    # Risk level per county using the same manual thresholds
+    def assign_risk(score):
+        return categorize(score, THRESHOLDS)
 
-    # Load GeoJSON
+    df_map = df_map.copy()
+    df_map["fips"] = df_map["fips"].astype(str).str.zfill(5)
+    df_map["Risk_Level"] = df_map["mean_score"].apply(assign_risk)
+
+    # Filter to Nebraska counties (FIPS starts with '31')
+    df_ne = df_map[df_map["fips"].str.startswith("31")].copy()
+
+    # GeoJSON for US counties
     with urlopen("https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json") as r:
         counties_geo = json.load(r)
 
-    # Ensure FIPS is string
-    df_map["fips"] = df_map["fips"].astype(str)
+    # dynamic color range
+    vmin, vmax = df_ne["mean_score"].min(), df_ne["mean_score"].max()
 
-    # Assign Risk Level
-    def assign_risk(score):
-        if score >= 16: return "High"
-        elif score >= 15: return "High‑Medium"
-        elif score >= 13: return "Medium"
-        elif score >= 11: return "Low‑Medium"
-        else: return "Low"
-    df_map["Risk_Level"] = df_map["mean_score"].apply(assign_risk)
-
-    # Filter for Nebraska (FIPS starting with '31')
-    df_ne = df_map[df_map["fips"].str.startswith("31")]
-
-    # Plot
     fig = px.choropleth(
         df_ne,
         geojson=counties_geo,
@@ -191,15 +164,20 @@ elif page == "🗺️ County Risk Map":
         color="mean_score",
         scope="usa",
         color_continuous_scale="Viridis",
-        range_color=(8, 36),
-        labels={'mean_score': 'Mean Exposure'},
-        hover_data={"county": True, "mean_score": False, "Risk_Level": True, "fips": False},
+        range_color=(vmin, vmax),
+        labels={"mean_score": "Mean Weighted Score"},
+        hover_data={"county": True, "Risk_Level": True, "mean_score": ":.3f", "fips": False},
     )
     fig.update_geos(fitbounds="locations", visible=False)
     fig.update_layout(
-        title="📍 Simulated Microplastic Exposure Score by Nebraska County",
-        margin={"r":0,"t":40,"l":0,"b":0}
+        title="📍 Nebraska Counties — Mean Weighted Score",
+        margin=dict(r=0, t=40, l=0, b=0)
     )
     st.plotly_chart(fig, use_container_width=True)
 
-
+    # Legend text for thresholds
+    st.caption(
+        f"Manual categories: {ORDER}. "
+        f"Cuts — Low ≤ {THRESHOLDS['p35']:.3f} < Mid ≤ {THRESHOLDS['p70']:.3f} "
+        f"< Mid-High ≤ {THRESHOLDS['p90']:.3f} < High ≤ {THRESHOLDS['p99']:.3f} < Very High."
+    )
