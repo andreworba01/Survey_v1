@@ -1,0 +1,1100 @@
+ID,Q73,Q74,Q75,Q76,Q77,Q78,Q79,Q80,DBSCAN_cluster,Cluster_Label,Exposure_Score,Exposure_Category,Weighted_Score,Quartile
+905012,5,1,1,1,1,1,1,1,0,Low–Moderate,12,Medium,1.2,Q2
+912010,3,2,2,1,2,1,3,1,0,Low–Moderate,15,High-Medium,1.738,Q4 (High)
+908015,5,4,2,2,1,2,2,1,0,Low–Moderate,19,High,1.925,Q4 (High)
+912011,1,4,2,2,1,1,1,1,0,Low–Moderate,13,Medium,1.434,Q3
+910012,2,4,3,2,1,1,1,1,0,Low–Moderate,15,High-Medium,1.548,Q4 (High)
+908014,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+912009,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+905010,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+905018,1,1,2,3,3,1,1,1,0,Low–Moderate,13,Medium,1.84,Q3
+902024,5,4,1,2,1,3,3,1,0,Low–Moderate,20,High,2.152,Q4 (High)
+902029,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907028,3,2,1,2,2,1,1,1,0,Low–Moderate,13,Medium,1.558,Q3
+911028,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901032,1,4,1,1,1,2,2,1,0,Low–Moderate,13,Medium,1.501,Q3
+903021,1,4,3,1,1,1,2,1,0,Low–Moderate,14,High-Medium,1.476,Q3
+902028,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+906024,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+911027,1,2,2,2,2,2,2,1,0,Low–Moderate,14,High-Medium,1.813,Q3
+903027,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+909029,1,2,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.07,Q1 (Low)
+903024,2,1,1,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.21,Q1 (Low)
+904031,1,2,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.07,Q1 (Low)
+907023,1,1,1,2,1,2,2,2,0,Low–Moderate,12,Medium,1.588,Q2
+903026,3,1,2,1,1,2,2,2,0,Low–Moderate,14,High-Medium,1.592,Q3
+910020,1,2,1,2,2,1,1,1,0,Low–Moderate,11,Low-Medium,1.458,Q2
+907024,3,1,2,2,1,1,2,2,0,Low–Moderate,14,High-Medium,1.599,Q3
+910035,2,1,2,4,2,1,1,2,-1,,15,High-Medium,1.959,Q4 (High)
+904032,2,3,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.19,Q2
+909032,4,3,1,1,1,1,2,1,0,Low–Moderate,14,High-Medium,1.428,Q3
+909033,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+906029,2,4,4,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.452,Q4 (High)
+912068,5,3,1,2,2,2,2,1,0,Low–Moderate,18,High,2.019,Q4 (High)
+911066,1,3,1,2,1,2,2,1,0,Low–Moderate,13,Medium,1.591,Q3
+910085,3,2,2,1,2,2,1,1,0,Low–Moderate,14,High-Medium,1.615,Q3
+909074,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+901080,2,1,3,2,1,1,1,4,-1,,15,High-Medium,1.749,Q4 (High)
+909084,3,1,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.164,Q2
+908073,3,2,3,1,1,2,1,2,0,Low–Moderate,15,High-Medium,1.588,Q4 (High)
+905086,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+905087,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+911081,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907074,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+907071,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906078,1,2,4,2,4,2,1,1,0,Low–Moderate,17,High,2.259,Q4 (High)
+909083,4,3,3,5,2,4,4,4,-1,,29,High,3.57,Q4 (High)
+910094,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906086,4,3,1,1,5,1,1,1,0,Low–Moderate,17,High,2.202,Q4 (High)
+910095,1,3,2,2,2,1,1,1,0,Low–Moderate,13,Medium,1.592,Q3
+912083,2,2,3,1,1,1,1,1,0,Low–Moderate,12,Medium,1.248,Q2
+906083,1,3,1,2,2,3,3,3,0,Low–Moderate,18,High,2.384,Q4 (High)
+905093,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+904085,1,1,2,2,1,1,1,2,0,Low–Moderate,11,Low-Medium,1.361,Q2
+908080,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+901085,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+908078,1,1,1,2,2,2,2,1,0,Low–Moderate,12,Medium,1.679,Q2
+909096,2,1,1,3,3,2,2,2,0,Low–Moderate,16,High,2.254,Q4 (High)
+911087,4,3,1,2,2,1,1,1,0,Low–Moderate,15,High-Medium,1.678,Q4 (High)
+904087,2,2,2,2,2,1,1,1,0,Low–Moderate,13,Medium,1.572,Q3
+906092,1,2,1,1,1,2,1,1,0,Low–Moderate,10,Low-Medium,1.223,Q1 (Low)
+905102,1,2,1,2,3,1,1,1,0,Low–Moderate,12,Medium,1.686,Q2
+907086,1,3,1,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.3,Q2
+904096,4,2,2,2,2,2,2,2,0,Low–Moderate,18,High,2.1,Q4 (High)
+904099,2,2,2,2,1,4,4,4,-1,,21,High,2.628,Q4 (High)
+904098,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+912101,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+903104,1,4,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.21,Q2
+901093,1,3,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.14,Q1 (Low)
+906110,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+907105,3,2,4,2,2,1,1,1,0,Low–Moderate,16,High,1.75,Q4 (High)
+912109,5,1,1,2,1,1,1,1,0,Low–Moderate,13,Medium,1.36,Q3
+912102,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+909111,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+911092,1,4,2,2,1,2,1,1,0,Low–Moderate,14,High-Medium,1.587,Q3
+910119,1,4,2,2,1,1,1,1,0,Low–Moderate,13,Medium,1.434,Q3
+902111,4,2,2,1,1,3,3,3,-1,,19,High,2.14,Q4 (High)
+910120,3,1,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.1,Q1 (Low)
+904104,1,4,1,2,1,1,1,1,0,Low–Moderate,12,Medium,1.37,Q2
+903105,4,2,2,2,2,4,4,4,-1,,24,High,2.956,Q4 (High)
+902113,2,2,2,2,3,1,1,1,0,Low–Moderate,14,High-Medium,1.8,Q3
+912115,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+909114,4,3,3,2,2,2,2,2,0,Low–Moderate,20,High,2.234,Q4 (High)
+906113,1,3,1,2,1,1,2,1,0,Low–Moderate,12,Medium,1.438,Q2
+906114,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+905126,1,1,1,1,4,4,1,1,-1,,14,High-Medium,2.143,Q3
+901118,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+902129,3,4,1,1,2,2,2,2,0,Low–Moderate,17,High,1.966,Q4 (High)
+910143,4,2,1,2,2,4,4,1,-1,,20,High,2.481,Q4 (High)
+901117,1,1,2,2,1,1,2,2,0,Low–Moderate,12,Medium,1.499,Q2
+910142,4,3,1,1,1,1,1,1,0,Low–Moderate,13,Medium,1.29,Q3
+907131,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906132,5,5,2,1,1,1,1,1,0,Low–Moderate,17,High,1.544,Q4 (High)
+905127,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907129,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+912132,4,4,2,3,3,2,2,1,0,Low–Moderate,21,High,2.491,Q4 (High)
+908127,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+908123,1,1,2,3,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.384,Q2
+901132,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+911129,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+911130,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+904139,2,1,2,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.274,Q2
+910158,1,3,1,2,2,1,1,1,0,Low–Moderate,12,Medium,1.528,Q2
+909139,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+911133,5,1,1,1,1,1,1,1,0,Low–Moderate,12,Medium,1.2,Q2
+905138,4,1,2,2,1,1,1,1,0,Low–Moderate,13,Medium,1.374,Q3
+902148,1,3,3,1,1,1,1,1,0,Low–Moderate,12,Medium,1.268,Q2
+909142,2,2,2,3,3,2,2,2,0,Low–Moderate,18,High,2.388,Q4 (High)
+910169,1,1,1,4,4,1,1,1,0,Low–Moderate,14,High-Medium,2.164,Q3
+908134,2,2,3,2,3,2,2,2,0,Low–Moderate,18,High,2.292,Q4 (High)
+905151,1,2,3,1,1,2,1,1,0,Low–Moderate,12,Medium,1.351,Q2
+902147,1,3,1,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.3,Q2
+904148,1,2,1,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.23,Q1 (Low)
+910172,1,3,3,1,1,1,1,1,0,Low–Moderate,12,Medium,1.268,Q2
+907160,2,2,2,1,1,1,4,1,0,Low–Moderate,14,High-Medium,1.598,Q3
+912155,1,1,1,1,1,1,2,1,0,Low–Moderate,9,Low,1.138,Q1 (Low)
+901149,2,1,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.05,Q1 (Low)
+908141,4,2,1,2,1,1,1,1,0,Low–Moderate,13,Medium,1.38,Q3
+904158,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901159,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+909163,1,2,2,1,4,1,1,1,0,Low–Moderate,13,Medium,1.818,Q3
+901160,3,1,2,1,2,1,1,1,0,Low–Moderate,12,Medium,1.392,Q2
+908151,4,1,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.15,Q2
+906159,4,1,2,3,2,2,2,2,0,Low–Moderate,18,High,2.19,Q4 (High)
+904157,2,2,3,1,2,1,1,1,0,Low–Moderate,13,Medium,1.476,Q3
+901157,1,1,1,2,1,2,2,1,0,Low–Moderate,11,Low-Medium,1.451,Q2
+908156,2,1,3,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.178,Q2
+904162,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+908155,1,1,3,2,2,1,1,1,0,Low–Moderate,12,Medium,1.516,Q2
+906165,3,3,2,3,4,2,2,1,0,Low–Moderate,20,High,2.599,Q4 (High)
+909171,4,1,2,2,2,1,1,2,0,Low–Moderate,15,High-Medium,1.739,Q4 (High)
+910185,1,4,2,1,1,1,1,1,0,Low–Moderate,12,Medium,1.274,Q2
+910188,1,1,3,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.288,Q2
+904165,2,2,1,2,1,2,1,1,0,Low–Moderate,12,Medium,1.433,Q2
+908162,1,3,1,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.3,Q2
+901174,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+905179,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+908171,2,2,1,3,1,4,4,4,-1,,21,High,2.724,Q4 (High)
+901061,5,5,1,2,3,2,1,1,0,Low–Moderate,20,High,2.249,Q4 (High)
+908064,4,1,3,1,1,1,1,1,0,Low–Moderate,13,Medium,1.278,Q3
+912062,2,2,2,2,2,1,1,1,0,Low–Moderate,13,Medium,1.572,Q3
+905069,2,2,1,2,1,2,2,1,0,Low–Moderate,13,Medium,1.571,Q3
+901001,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+908001,4,1,2,1,1,4,1,1,0,Low–Moderate,15,High-Medium,1.673,Q4 (High)
+907019,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+909023,2,3,2,2,1,2,2,2,0,Low–Moderate,16,High,1.842,Q4 (High)
+907017,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901024,3,2,2,4,1,4,4,4,-1,,24,High,2.998,Q4 (High)
+910016,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+904023,2,3,2,2,3,2,1,1,0,Low–Moderate,16,High,2.023,Q4 (High)
+912017,2,2,2,2,2,3,3,2,0,Low–Moderate,18,High,2.291,Q4 (High)
+902016,3,2,4,1,1,1,1,2,0,Low–Moderate,15,High-Medium,1.499,Q4 (High)
+906017,3,3,1,1,1,2,1,2,0,Low–Moderate,14,High-Medium,1.53,Q3
+903014,5,1,1,2,1,1,1,1,0,Low–Moderate,13,Medium,1.36,Q3
+912018,2,2,2,2,2,2,2,2,0,Low–Moderate,16,High,2,Q4 (High)
+908036,2,2,1,2,1,3,2,1,0,Low–Moderate,14,High-Medium,1.724,Q3
+908037,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906623,2,2,2,2,2,1,1,1,0,Low–Moderate,13,Medium,1.572,Q3
+901619,1,1,1,2,2,2,2,1,0,Low–Moderate,12,Medium,1.679,Q2
+903611,3,2,4,2,1,1,1,1,0,Low–Moderate,15,High-Medium,1.522,Q4 (High)
+906621,4,1,1,3,1,1,1,1,0,Low–Moderate,13,Medium,1.47,Q3
+903617,4,3,3,1,1,2,2,2,0,Low–Moderate,18,High,1.846,Q4 (High)
+912617,3,2,3,2,2,2,2,2,0,Low–Moderate,18,High,2.114,Q4 (High)
+912624,2,2,2,2,1,1,1,1,0,Low–Moderate,12,Medium,1.344,Q2
+903619,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907449,2,3,2,2,1,1,1,1,0,Low–Moderate,13,Medium,1.414,Q3
+901484,1,1,3,2,1,1,1,2,0,Low–Moderate,12,Medium,1.425,Q2
+902484,4,1,2,2,1,1,1,1,0,Low–Moderate,13,Medium,1.374,Q3
+906481,4,1,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.15,Q2
+904473,1,1,3,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.288,Q2
+911375,4,1,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.15,Q2
+908382,2,1,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.05,Q1 (Low)
+902403,4,4,1,2,1,2,1,2,0,Low–Moderate,17,High,1.81,Q4 (High)
+906406,1,4,3,2,1,2,2,2,0,Low–Moderate,17,High,1.926,Q4 (High)
+912403,4,3,3,2,5,4,4,4,-1,,29,High,3.774,Q4 (High)
+912398,4,2,2,2,1,1,1,1,0,Low–Moderate,14,High-Medium,1.444,Q3
+902404,2,2,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.12,Q1 (Low)
+909593,4,3,1,1,1,1,1,1,0,Low–Moderate,13,Medium,1.29,Q3
+910596,1,4,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.21,Q2
+905603,1,2,2,2,1,2,2,2,0,Low–Moderate,14,High-Medium,1.722,Q3
+908596,1,2,1,1,2,2,1,1,0,Low–Moderate,11,Low-Medium,1.451,Q2
+904638,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+904667,2,3,2,2,2,1,1,1,0,Low–Moderate,14,High-Medium,1.642,Q3
+905468,1,2,1,2,3,1,1,1,0,Low–Moderate,12,Medium,1.686,Q2
+907479,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+902009,1,1,1,2,1,1,2,2,0,Low–Moderate,11,Low-Medium,1.435,Q2
+906007,4,5,1,3,4,2,1,2,-1,,22,High,2.724,Q4 (High)
+911007,1,1,2,1,3,4,4,4,-1,,20,High,2.804,Q4 (High)
+902007,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+904015,1,1,3,1,4,1,1,1,0,Low–Moderate,13,Medium,1.812,Q3
+911010,1,5,1,1,1,1,1,1,0,Low–Moderate,12,Medium,1.28,Q2
+907008,4,3,1,2,1,1,1,1,0,Low–Moderate,14,High-Medium,1.45,Q3
+908013,2,1,3,1,1,3,1,4,-1,,16,High,1.895,Q4 (High)
+910007,1,1,4,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.192,Q2
+901012,5,2,2,3,4,2,2,2,-1,,22,High,2.766,Q4 (High)
+904014,1,4,1,2,1,1,1,1,0,Low–Moderate,12,Medium,1.37,Q2
+908011,4,3,3,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.418,Q4 (High)
+906004,2,1,2,2,1,2,1,2,0,Low–Moderate,13,Medium,1.564,Q3
+909013,2,1,3,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.178,Q2
+912042,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+904047,1,4,1,2,3,1,2,1,0,Low–Moderate,15,High-Medium,1.964,Q4 (High)
+901045,3,4,2,2,2,1,2,1,0,Low–Moderate,17,High,1.9,Q4 (High)
+904050,1,1,1,3,1,1,2,1,0,Low–Moderate,11,Low-Medium,1.458,Q2
+901046,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+905044,2,2,1,2,2,2,2,1,0,Low–Moderate,14,High-Medium,1.799,Q3
+905053,1,4,2,2,2,1,1,1,0,Low–Moderate,14,High-Medium,1.662,Q3
+912052,2,2,3,2,2,1,1,1,0,Low–Moderate,14,High-Medium,1.636,Q3
+912049,1,1,2,3,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.384,Q2
+909056,1,3,3,2,1,2,1,1,0,Low–Moderate,14,High-Medium,1.581,Q3
+905057,4,3,1,1,1,2,1,1,0,Low–Moderate,14,High-Medium,1.443,Q3
+901054,1,1,1,1,1,2,1,2,0,Low–Moderate,10,Low-Medium,1.29,Q1 (Low)
+909057,4,4,4,1,1,4,1,1,-1,,20,High,2.011,Q4 (High)
+901051,2,1,3,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.178,Q2
+905054,1,1,1,1,1,4,1,1,0,Low–Moderate,11,Low-Medium,1.459,Q2
+912065,4,3,2,1,2,2,2,2,0,Low–Moderate,18,High,2.01,Q4 (High)
+909066,1,1,1,1,2,1,1,1,0,Low–Moderate,9,Low,1.228,Q1 (Low)
+909122,1,2,2,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.294,Q2
+911100,3,2,2,1,1,2,2,1,0,Low–Moderate,14,High-Medium,1.525,Q3
+902125,1,1,3,1,5,1,1,1,0,Low–Moderate,14,High-Medium,2.04,Q3
+903122,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+912118,3,2,3,2,3,2,1,2,0,Low–Moderate,18,High,2.204,Q4 (High)
+907125,2,1,3,1,1,1,1,2,0,Low–Moderate,12,Medium,1.315,Q2
+902124,5,5,1,1,1,1,1,1,0,Low–Moderate,16,High,1.48,Q4 (High)
+901109,3,3,3,1,2,2,1,1,0,Low–Moderate,16,High,1.749,Q4 (High)
+901113,3,1,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.164,Q2
+902117,2,4,1,2,1,3,3,3,-1,,19,High,2.276,Q4 (High)
+907138,4,1,3,2,1,4,4,4,-1,,23,High,2.722,Q4 (High)
+902140,2,4,1,2,1,4,4,1,-1,,19,High,2.293,Q4 (High)
+901130,3,2,2,3,3,1,1,1,0,Low–Moderate,16,High,2.01,Q4 (High)
+911118,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907137,5,4,3,1,1,1,1,1,0,Low–Moderate,17,High,1.538,Q4 (High)
+910150,3,1,1,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.26,Q2
+901131,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+912135,1,2,1,1,1,1,2,2,0,Low–Moderate,11,Low-Medium,1.345,Q2
+901128,1,4,1,2,2,1,1,1,0,Low–Moderate,13,Medium,1.598,Q3
+903133,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+911117,4,2,1,3,1,1,1,1,0,Low–Moderate,14,High-Medium,1.54,Q3
+904128,5,1,1,1,1,2,2,2,0,Low–Moderate,15,High-Medium,1.628,Q4 (High)
+903139,1,1,2,2,1,1,1,2,0,Low–Moderate,11,Low-Medium,1.361,Q2
+908131,2,3,2,1,1,2,2,2,0,Low–Moderate,15,High-Medium,1.682,Q4 (High)
+910164,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+903151,1,3,1,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.3,Q2
+901141,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901153,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+908144,5,5,1,2,2,1,1,1,0,Low–Moderate,18,High,1.868,Q4 (High)
+908147,1,1,1,1,1,1,2,1,0,Low–Moderate,9,Low,1.138,Q1 (Low)
+904154,2,2,2,2,2,2,1,1,0,Low–Moderate,14,High-Medium,1.725,Q3
+908146,1,1,1,1,3,1,1,1,0,Low–Moderate,10,Low-Medium,1.456,Q1 (Low)
+911154,1,3,2,2,1,1,1,2,0,Low–Moderate,13,Medium,1.501,Q3
+908152,3,2,3,1,1,2,2,2,0,Low–Moderate,16,High,1.726,Q4 (High)
+906168,4,3,1,2,2,4,4,1,-1,,21,High,2.551,Q4 (High)
+911174,2,1,1,2,1,3,3,1,0,Low–Moderate,14,High-Medium,1.792,Q3
+908167,2,3,2,3,2,1,1,1,0,Low–Moderate,15,High-Medium,1.802,Q4 (High)
+908168,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+905177,1,1,1,1,1,2,2,2,0,Low–Moderate,11,Low-Medium,1.428,Q2
+909446,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+904447,3,2,2,1,1,1,1,1,0,Low–Moderate,12,Medium,1.234,Q2
+905440,2,1,1,1,1,2,2,1,0,Low–Moderate,11,Low-Medium,1.341,Q2
+906450,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+906453,1,1,3,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.128,Q1 (Low)
+910448,1,3,1,1,2,1,1,1,0,Low–Moderate,11,Low-Medium,1.368,Q2
+909449,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907454,5,1,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.264,Q3
+907457,5,1,2,2,2,1,1,1,0,Low–Moderate,15,High-Medium,1.652,Q4 (High)
+901441,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+907459,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+912446,1,1,3,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.128,Q1 (Low)
+903459,1,1,1,2,2,2,1,1,0,Low–Moderate,11,Low-Medium,1.541,Q2
+909458,2,2,2,1,1,2,1,1,0,Low–Moderate,12,Medium,1.337,Q2
+909455,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+901455,3,1,1,3,1,2,1,1,0,Low–Moderate,13,Medium,1.573,Q3
+906464,4,3,2,1,2,1,1,1,0,Low–Moderate,15,High-Medium,1.582,Q4 (High)
+910459,1,1,1,3,1,1,1,2,0,Low–Moderate,11,Low-Medium,1.457,Q2
+908456,1,2,3,1,3,1,1,1,0,Low–Moderate,13,Medium,1.654,Q3
+908457,2,2,2,1,2,1,1,1,0,Low–Moderate,12,Medium,1.412,Q2
+906461,4,3,2,2,3,2,2,1,0,Low–Moderate,19,High,2.261,Q4 (High)
+902455,1,1,1,3,3,3,2,3,-1,,17,High,2.494,Q4 (High)
+903462,2,2,3,1,1,3,3,3,-1,,18,High,2.104,Q4 (High)
+910456,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907460,1,2,1,2,1,1,2,1,0,Low–Moderate,11,Low-Medium,1.368,Q2
+908476,3,1,4,2,1,1,1,1,0,Low–Moderate,14,High-Medium,1.452,Q3
+902480,5,1,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.264,Q3
+909480,3,2,4,1,1,1,1,1,0,Low–Moderate,14,High-Medium,1.362,Q3
+909479,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901483,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+906612,5,5,4,1,1,1,1,1,0,Low–Moderate,19,High,1.672,Q4 (High)
+904600,1,3,1,2,2,2,2,1,0,Low–Moderate,14,High-Medium,1.819,Q3
+905607,1,4,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.21,Q2
+912606,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+906611,5,3,2,2,2,1,1,1,0,Low–Moderate,17,High,1.792,Q4 (High)
+901607,1,3,1,2,2,1,1,1,0,Low–Moderate,12,Medium,1.528,Q2
+904607,3,2,1,3,1,2,1,1,0,Low–Moderate,14,High-Medium,1.643,Q3
+908599,2,2,1,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.28,Q2
+910600,5,5,1,1,1,1,1,1,0,Low–Moderate,16,High,1.48,Q4 (High)
+911604,1,3,2,2,2,1,1,1,0,Low–Moderate,13,Medium,1.592,Q3
+908601,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+908609,3,3,2,2,2,2,2,1,0,Low–Moderate,17,High,1.983,Q4 (High)
+911609,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901608,3,3,1,3,1,1,1,1,0,Low–Moderate,14,High-Medium,1.56,Q3
+908604,1,1,2,1,1,1,2,2,0,Low–Moderate,11,Low-Medium,1.339,Q2
+904641,1,1,1,2,3,1,1,1,0,Low–Moderate,11,Low-Medium,1.616,Q2
+908592,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+905596,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+909632,1,2,3,1,1,2,1,1,0,Low–Moderate,12,Medium,1.351,Q2
+909639,1,1,1,2,2,2,1,2,0,Low–Moderate,12,Medium,1.678,Q2
+908350,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+908357,5,1,2,3,3,2,2,2,0,Low–Moderate,20,High,2.468,Q4 (High)
+901186,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+908189,4,3,2,1,2,1,1,1,0,Low–Moderate,15,High-Medium,1.582,Q4 (High)
+906196,1,3,3,1,1,1,1,1,0,Low–Moderate,12,Medium,1.268,Q2
+909200,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+910217,1,2,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.07,Q1 (Low)
+902205,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+904216,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+908209,1,3,3,1,5,1,1,1,0,Low–Moderate,16,High,2.18,Q4 (High)
+903217,1,1,2,2,1,1,1,2,0,Low–Moderate,11,Low-Medium,1.361,Q2
+901212,3,1,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.164,Q2
+903223,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+909227,3,2,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.17,Q2
+903230,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+903231,4,3,1,1,1,1,1,1,0,Low–Moderate,13,Medium,1.29,Q3
+903229,3,4,1,1,1,1,1,1,0,Low–Moderate,13,Medium,1.31,Q3
+911225,1,2,2,1,1,1,2,1,0,Low–Moderate,11,Low-Medium,1.272,Q2
+906222,2,3,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.19,Q2
+911224,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+904229,1,2,1,3,1,2,1,1,0,Low–Moderate,12,Medium,1.543,Q2
+910252,2,1,2,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.114,Q1 (Low)
+908238,1,4,1,2,1,2,4,2,-1,,17,High,2.074,Q4 (High)
+908242,1,1,1,2,1,1,2,1,0,Low–Moderate,10,Low-Medium,1.298,Q1 (Low)
+904241,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+911250,4,4,1,1,1,1,1,1,0,Low–Moderate,14,High-Medium,1.36,Q3
+906248,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+911249,1,5,2,2,1,2,1,1,0,Low–Moderate,15,High-Medium,1.657,Q4 (High)
+908253,2,2,2,2,1,1,1,1,0,Low–Moderate,12,Medium,1.344,Q2
+908256,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+912252,2,2,1,1,1,4,3,3,-1,,17,High,2.129,Q4 (High)
+905251,1,2,1,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.23,Q1 (Low)
+903246,1,1,4,2,1,2,1,1,0,Low–Moderate,13,Medium,1.505,Q3
+912256,1,2,2,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.134,Q1 (Low)
+911252,4,3,1,2,1,1,1,1,0,Low–Moderate,14,High-Medium,1.45,Q3
+909254,5,2,1,2,1,1,4,1,-1,,17,High,1.844,Q4 (High)
+902252,1,2,3,3,4,1,1,1,0,Low–Moderate,16,High,2.202,Q4 (High)
+902258,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+912263,4,3,1,2,2,4,4,4,-1,,24,High,2.962,Q4 (High)
+908261,1,1,2,2,1,2,2,1,0,Low–Moderate,12,Medium,1.515,Q2
+912262,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+909261,4,1,4,1,3,2,2,2,-1,,19,High,2.226,Q4 (High)
+902262,1,3,2,2,2,2,2,1,0,Low–Moderate,15,High-Medium,1.883,Q4 (High)
+911260,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906254,1,4,1,2,2,1,2,1,0,Low–Moderate,14,High-Medium,1.736,Q3
+908266,2,3,3,2,1,2,2,2,0,Low–Moderate,17,High,1.906,Q4 (High)
+911263,1,1,2,1,1,2,1,1,0,Low–Moderate,10,Low-Medium,1.217,Q1 (Low)
+911258,4,1,2,2,4,2,2,2,-1,,19,High,2.486,Q4 (High)
+904257,4,3,2,1,1,2,3,3,0,Low–Moderate,19,High,2.057,Q4 (High)
+909264,1,1,3,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.288,Q2
+910284,1,3,3,2,3,1,1,1,0,Low–Moderate,15,High-Medium,1.884,Q4 (High)
+907265,5,1,1,3,1,1,1,1,0,Low–Moderate,14,High-Medium,1.52,Q3
+906260,1,1,3,3,1,1,1,2,0,Low–Moderate,13,Medium,1.585,Q3
+910281,2,1,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.05,Q1 (Low)
+912271,1,1,1,1,1,2,2,1,0,Low–Moderate,10,Low-Medium,1.291,Q1 (Low)
+909270,1,1,1,2,2,2,2,2,0,Low–Moderate,13,Medium,1.816,Q3
+905271,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901269,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+905274,1,2,2,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.134,Q1 (Low)
+904268,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+912277,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+907278,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+903270,1,2,1,2,1,2,1,2,0,Low–Moderate,12,Medium,1.52,Q2
+904267,1,1,3,1,1,2,2,2,0,Low–Moderate,13,Medium,1.556,Q3
+902281,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+902285,2,1,1,2,1,3,1,1,0,Low–Moderate,12,Medium,1.516,Q2
+901265,1,3,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.14,Q1 (Low)
+902277,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+909272,2,1,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.05,Q1 (Low)
+901264,4,3,1,1,3,2,2,2,0,Low–Moderate,18,High,2.174,Q4 (High)
+904272,4,3,1,1,3,1,1,1,0,Low–Moderate,15,High-Medium,1.746,Q4 (High)
+909273,1,1,2,2,4,2,2,2,0,Low–Moderate,16,High,2.336,Q4 (High)
+906268,5,3,2,2,2,2,2,2,0,Low–Moderate,20,High,2.22,Q4 (High)
+905286,2,2,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.184,Q2
+903274,2,2,4,2,2,4,4,4,-1,,24,High,2.984,Q4 (High)
+907285,1,2,2,2,2,1,1,1,0,Low–Moderate,12,Medium,1.522,Q2
+912285,2,2,1,2,2,1,1,1,0,Low–Moderate,12,Medium,1.508,Q2
+910292,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+908284,1,3,3,3,1,1,2,2,0,Low–Moderate,16,High,1.863,Q4 (High)
+905292,3,2,2,2,2,1,1,1,0,Low–Moderate,14,High-Medium,1.622,Q3
+910305,1,1,2,1,1,1,1,2,0,Low–Moderate,10,Low-Medium,1.201,Q1 (Low)
+911287,2,2,1,1,2,1,1,1,0,Low–Moderate,11,Low-Medium,1.348,Q2
+901289,3,2,2,3,2,2,2,2,0,Low–Moderate,18,High,2.21,Q4 (High)
+908289,2,1,2,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.274,Q2
+902293,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+903278,2,1,2,2,1,2,1,2,0,Low–Moderate,13,Medium,1.564,Q3
+911285,1,3,1,2,2,1,2,1,0,Low–Moderate,13,Medium,1.666,Q3
+905295,1,3,1,2,1,1,2,1,0,Low–Moderate,12,Medium,1.438,Q2
+910300,1,3,1,1,1,1,2,1,0,Low–Moderate,11,Low-Medium,1.278,Q2
+901286,1,2,2,2,2,1,1,2,0,Low–Moderate,13,Medium,1.659,Q3
+908291,1,4,2,1,1,1,1,1,0,Low–Moderate,12,Medium,1.274,Q2
+907291,4,1,2,2,1,1,1,1,0,Low–Moderate,13,Medium,1.374,Q3
+908290,4,3,2,2,2,3,2,2,0,Low–Moderate,20,High,2.323,Q4 (High)
+911283,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+911284,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+904291,1,1,4,1,1,1,1,2,0,Low–Moderate,12,Medium,1.329,Q2
+912289,1,1,1,2,1,2,1,1,0,Low–Moderate,10,Low-Medium,1.313,Q1 (Low)
+905299,2,3,1,2,1,2,2,1,0,Low–Moderate,14,High-Medium,1.641,Q3
+906289,2,2,2,2,2,1,1,1,0,Low–Moderate,13,Medium,1.572,Q3
+909288,1,1,2,2,2,1,1,1,0,Low–Moderate,11,Low-Medium,1.452,Q2
+902299,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+909293,5,1,1,1,1,1,1,1,0,Low–Moderate,12,Medium,1.2,Q2
+911290,1,3,2,2,1,1,1,1,0,Low–Moderate,12,Medium,1.364,Q2
+907306,4,3,1,2,1,1,1,1,0,Low–Moderate,14,High-Medium,1.45,Q3
+907296,1,2,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.07,Q1 (Low)
+903302,3,5,2,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.444,Q4 (High)
+911304,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+907309,1,3,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.14,Q1 (Low)
+901300,1,1,2,2,2,1,1,1,0,Low–Moderate,11,Low-Medium,1.452,Q2
+906293,1,3,3,2,1,2,2,2,0,Low–Moderate,16,High,1.856,Q4 (High)
+902302,2,3,2,1,1,1,1,1,0,Low–Moderate,12,Medium,1.254,Q2
+912304,5,4,2,3,1,1,1,1,0,Low–Moderate,18,High,1.794,Q4 (High)
+911297,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907307,1,4,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.21,Q2
+904304,3,3,2,2,2,1,1,1,0,Low–Moderate,15,High-Medium,1.692,Q4 (High)
+910318,3,1,3,2,2,2,2,2,0,Low–Moderate,17,High,2.044,Q4 (High)
+901307,2,2,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.184,Q2
+910315,2,3,1,2,2,1,1,1,0,Low–Moderate,13,Medium,1.578,Q3
+903290,1,1,1,2,1,2,1,1,0,Low–Moderate,10,Low-Medium,1.313,Q1 (Low)
+908303,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+903295,3,1,2,1,1,2,1,2,0,Low–Moderate,13,Medium,1.454,Q3
+905301,1,4,3,1,1,1,1,1,0,Low–Moderate,13,Medium,1.338,Q3
+907299,1,1,2,2,1,2,2,1,0,Low–Moderate,12,Medium,1.515,Q2
+911299,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+912298,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+903300,2,1,1,1,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.278,Q1 (Low)
+906294,1,3,2,2,1,2,2,2,0,Low–Moderate,15,High-Medium,1.792,Q4 (High)
+902307,3,1,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.164,Q2
+901302,2,2,2,2,2,1,1,1,0,Low–Moderate,13,Medium,1.572,Q3
+901312,1,3,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.14,Q1 (Low)
+909298,1,2,2,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.134,Q1 (Low)
+906300,1,3,1,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.3,Q2
+904311,1,1,1,1,1,2,2,1,0,Low–Moderate,10,Low-Medium,1.291,Q1 (Low)
+907305,2,2,1,2,1,1,1,2,0,Low–Moderate,12,Medium,1.417,Q2
+908296,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+909303,1,5,1,3,1,1,1,1,0,Low–Moderate,14,High-Medium,1.6,Q3
+908306,1,1,1,2,2,2,1,2,0,Low–Moderate,12,Medium,1.678,Q2
+910330,1,1,2,3,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.384,Q2
+903313,1,3,1,4,2,4,1,1,-1,,17,High,2.307,Q4 (High)
+906318,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+910329,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+908316,1,2,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.07,Q1 (Low)
+908318,4,1,3,1,1,1,1,1,0,Low–Moderate,13,Medium,1.278,Q3
+910325,2,2,2,3,1,1,1,1,0,Low–Moderate,13,Medium,1.504,Q3
+912309,3,3,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.304,Q3
+903310,1,1,3,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.288,Q2
+907314,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+904316,3,1,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.164,Q2
+909315,1,1,1,2,1,2,1,2,0,Low–Moderate,11,Low-Medium,1.45,Q2
+906308,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+906317,2,3,1,1,1,2,2,1,0,Low–Moderate,13,Medium,1.481,Q3
+912310,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+905314,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+911320,5,1,1,1,1,1,1,1,0,Low–Moderate,12,Medium,1.2,Q2
+906320,1,2,1,2,1,1,2,1,0,Low–Moderate,11,Low-Medium,1.368,Q2
+908319,1,3,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.14,Q1 (Low)
+903323,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+904324,2,2,2,2,3,4,4,2,-1,,21,High,2.81,Q4 (High)
+907322,2,3,2,1,1,1,1,1,0,Low–Moderate,12,Medium,1.254,Q2
+908321,2,2,1,1,1,3,3,1,0,Low–Moderate,14,High-Medium,1.702,Q3
+906323,4,3,3,1,1,3,2,2,0,Low–Moderate,19,High,1.999,Q4 (High)
+905326,1,3,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.204,Q2
+911322,2,4,3,1,1,1,1,1,0,Low–Moderate,14,High-Medium,1.388,Q3
+912327,1,4,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.21,Q2
+906325,1,1,1,2,1,2,1,1,0,Low–Moderate,10,Low-Medium,1.313,Q1 (Low)
+911324,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+901326,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901330,1,4,2,1,3,4,2,2,-1,,19,High,2.464,Q4 (High)
+910340,1,1,1,3,2,4,4,4,-1,,20,High,2.832,Q4 (High)
+912331,4,2,1,1,4,1,1,2,0,Low–Moderate,16,High,2.041,Q4 (High)
+909330,1,1,2,1,1,1,1,2,0,Low–Moderate,10,Low-Medium,1.201,Q1 (Low)
+911328,2,2,2,1,2,1,1,2,0,Low–Moderate,13,Medium,1.549,Q3
+909001,2,2,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.184,Q2
+910002,1,2,1,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.23,Q1 (Low)
+904004,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+906001,1,1,1,1,1,1,3,1,0,Low–Moderate,10,Low-Medium,1.276,Q1 (Low)
+911001,3,1,1,1,1,3,1,1,0,Low–Moderate,12,Medium,1.406,Q2
+909003,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+904006,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+911002,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+909071,4,1,3,2,1,1,1,1,0,Low–Moderate,14,High-Medium,1.438,Q3
+911071,2,2,2,1,1,2,1,1,0,Low–Moderate,12,Medium,1.337,Q2
+903068,1,1,3,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.128,Q1 (Low)
+902072,1,5,1,1,1,1,1,1,0,Low–Moderate,12,Medium,1.28,Q2
+911073,5,4,1,1,2,1,1,1,0,Low–Moderate,16,High,1.638,Q4 (High)
+903072,1,1,3,1,3,2,2,2,0,Low–Moderate,15,High-Medium,2.012,Q4 (High)
+905077,2,1,3,2,1,1,1,1,0,Low–Moderate,12,Medium,1.338,Q2
+901074,5,1,3,2,1,2,2,2,0,Low–Moderate,18,High,1.916,Q4 (High)
+901352,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+909194,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901196,1,2,2,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.294,Q2
+901227,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+910250,2,2,3,1,1,1,1,1,0,Low–Moderate,12,Medium,1.248,Q2
+910640,1,3,2,1,1,1,2,2,0,Low–Moderate,13,Medium,1.479,Q3
+909638,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+903642,1,3,2,2,3,2,2,1,0,Low–Moderate,16,High,2.111,Q4 (High)
+912646,2,4,1,1,1,1,2,2,0,Low–Moderate,14,High-Medium,1.535,Q3
+904648,3,4,2,1,1,2,2,1,0,Low–Moderate,16,High,1.665,Q4 (High)
+901649,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906221,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+907353,2,2,2,4,1,1,2,2,-1,,16,High,1.939,Q4 (High)
+909347,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+902356,2,3,2,2,2,3,2,2,0,Low–Moderate,18,High,2.223,Q4 (High)
+909350,2,1,2,2,1,2,1,1,0,Low–Moderate,12,Medium,1.427,Q2
+909348,1,3,1,2,2,1,1,1,0,Low–Moderate,12,Medium,1.528,Q2
+906350,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+905460,1,2,3,1,3,1,1,1,0,Low–Moderate,13,Medium,1.654,Q3
+903473,2,3,2,2,1,2,2,2,0,Low–Moderate,16,High,1.842,Q4 (High)
+911473,4,4,2,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.424,Q4 (High)
+910469,5,2,2,3,1,1,1,1,0,Low–Moderate,16,High,1.654,Q4 (High)
+907473,1,1,3,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.128,Q1 (Low)
+901476,1,3,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.14,Q1 (Low)
+905463,1,1,3,1,1,1,1,2,0,Low–Moderate,11,Low-Medium,1.265,Q2
+904469,4,1,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.15,Q2
+901553,2,1,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.05,Q1 (Low)
+911567,4,4,2,2,1,3,3,3,-1,,22,High,2.44,Q4 (High)
+906564,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+911564,5,3,2,1,1,2,2,1,0,Low–Moderate,17,High,1.695,Q4 (High)
+905550,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+904556,1,1,3,2,4,1,1,1,0,Low–Moderate,14,High-Medium,1.972,Q3
+903560,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+909561,3,1,3,2,1,2,1,2,0,Low–Moderate,15,High-Medium,1.678,Q4 (High)
+912561,1,1,4,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.192,Q2
+910562,1,2,1,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.23,Q1 (Low)
+907565,3,3,1,1,1,2,2,2,0,Low–Moderate,15,High-Medium,1.668,Q4 (High)
+904557,2,2,2,3,1,1,1,1,0,Low–Moderate,13,Medium,1.504,Q3
+909567,3,3,1,2,2,2,2,1,0,Low–Moderate,16,High,1.919,Q4 (High)
+911570,1,1,2,1,2,1,1,2,0,Low–Moderate,11,Low-Medium,1.429,Q2
+909568,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+907574,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+909569,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+911571,1,1,1,3,1,3,1,1,0,Low–Moderate,12,Medium,1.626,Q2
+912564,4,2,2,2,2,2,2,2,0,Low–Moderate,18,High,2.1,Q4 (High)
+901558,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+901557,1,3,2,3,2,1,1,1,0,Low–Moderate,14,High-Medium,1.752,Q3
+912567,4,1,1,2,1,1,1,1,0,Low–Moderate,12,Medium,1.31,Q2
+912563,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+909223,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901216,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+911217,2,2,1,2,1,4,4,1,-1,,17,High,2.153,Q4 (High)
+912223,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+912224,4,1,3,1,1,1,1,1,0,Low–Moderate,13,Medium,1.278,Q3
+905220,4,1,4,1,1,4,1,4,-1,,20,High,2.212,Q4 (High)
+903227,4,1,3,1,4,1,1,1,-1,,16,High,1.962,Q4 (High)
+912229,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+908219,1,2,1,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.23,Q1 (Low)
+904225,4,1,4,1,1,2,1,2,0,Low–Moderate,16,High,1.632,Q4 (High)
+905233,3,1,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.1,Q1 (Low)
+911237,2,2,2,2,2,2,2,2,0,Low–Moderate,16,High,2,Q4 (High)
+906228,1,3,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.14,Q1 (Low)
+912243,1,3,1,1,1,2,1,1,0,Low–Moderate,11,Low-Medium,1.293,Q2
+905391,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906401,3,1,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.1,Q1 (Low)
+911569,3,3,1,2,2,1,1,1,0,Low–Moderate,14,High-Medium,1.628,Q3
+905568,3,2,2,2,1,1,1,1,0,Low–Moderate,13,Medium,1.394,Q3
+908569,2,2,1,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.28,Q2
+909575,2,2,3,2,2,2,2,2,0,Low–Moderate,17,High,2.064,Q4 (High)
+903573,1,3,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.14,Q1 (Low)
+911574,1,3,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.204,Q2
+904449,4,3,1,1,1,2,2,1,0,Low–Moderate,15,High-Medium,1.581,Q4 (High)
+909490,3,1,1,1,1,4,1,1,0,Low–Moderate,13,Medium,1.559,Q3
+909498,1,1,1,1,1,4,1,4,-1,,14,High-Medium,1.87,Q3
+906550,4,1,1,3,2,2,2,1,0,Low–Moderate,16,High,1.989,Q4 (High)
+902547,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+909531,4,3,1,1,1,1,1,1,0,Low–Moderate,13,Medium,1.29,Q3
+906529,2,2,1,1,1,3,2,1,0,Low–Moderate,13,Medium,1.564,Q3
+912547,1,3,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.14,Q1 (Low)
+907558,2,4,2,2,1,1,1,1,0,Low–Moderate,14,High-Medium,1.484,Q3
+907548,2,1,2,1,3,2,1,2,0,Low–Moderate,14,High-Medium,1.86,Q3
+905525,1,1,4,1,1,1,1,2,0,Low–Moderate,12,Medium,1.329,Q2
+901533,2,2,4,2,2,2,2,2,0,Low–Moderate,18,High,2.128,Q4 (High)
+909540,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+911544,3,3,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.304,Q3
+906557,2,2,3,1,1,2,2,2,0,Low–Moderate,15,High-Medium,1.676,Q4 (High)
+911537,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+909541,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+911539,4,2,1,1,2,4,2,1,-1,,17,High,2.045,Q4 (High)
+901542,4,3,2,2,2,2,2,2,0,Low–Moderate,19,High,2.17,Q4 (High)
+906552,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+904549,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+910533,2,1,2,1,1,2,1,2,0,Low–Moderate,12,Medium,1.404,Q2
+902562,4,4,1,1,1,2,2,1,0,Low–Moderate,16,High,1.651,Q4 (High)
+907528,3,2,1,2,1,4,1,4,-1,,18,High,2.2,Q4 (High)
+901534,1,3,2,2,1,1,1,1,0,Low–Moderate,12,Medium,1.364,Q2
+904548,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+904536,1,1,1,1,2,1,1,1,0,Low–Moderate,9,Low,1.228,Q1 (Low)
+910525,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+907529,3,2,3,3,2,1,1,1,0,Low–Moderate,16,High,1.846,Q4 (High)
+907554,5,2,3,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.398,Q4 (High)
+906543,2,4,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.324,Q3
+907530,2,4,1,2,2,1,1,1,0,Low–Moderate,14,High-Medium,1.648,Q3
+904540,2,2,4,3,3,2,2,2,0,Low–Moderate,20,High,2.516,Q4 (High)
+911556,2,1,1,2,1,3,1,1,0,Low–Moderate,12,Medium,1.516,Q2
+910542,3,2,1,1,3,1,1,1,0,Low–Moderate,13,Medium,1.626,Q3
+911553,5,1,1,2,1,1,1,1,0,Low–Moderate,13,Medium,1.36,Q3
+911555,1,1,3,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.128,Q1 (Low)
+909547,4,1,1,1,1,2,2,2,0,Low–Moderate,14,High-Medium,1.578,Q3
+909551,5,4,2,1,1,1,1,1,0,Low–Moderate,16,High,1.474,Q4 (High)
+909526,2,2,3,3,1,1,1,1,0,Low–Moderate,14,High-Medium,1.568,Q3
+910524,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+911521,3,1,2,2,1,2,1,1,0,Low–Moderate,13,Medium,1.477,Q3
+912549,3,2,1,2,3,4,3,4,-1,,22,High,2.932,Q4 (High)
+910530,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+912555,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+912554,1,1,1,2,3,1,1,1,0,Low–Moderate,11,Low-Medium,1.616,Q2
+901562,1,1,2,1,3,1,1,1,0,Low–Moderate,11,Low-Medium,1.52,Q2
+904566,1,1,2,1,1,1,1,2,0,Low–Moderate,10,Low-Medium,1.201,Q1 (Low)
+908567,5,4,1,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.41,Q4 (High)
+906583,2,3,2,2,2,2,2,2,0,Low–Moderate,17,High,2.07,Q4 (High)
+907598,2,3,3,1,1,1,1,1,0,Low–Moderate,13,Medium,1.318,Q3
+905602,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+908579,3,3,1,1,1,1,1,1,0,Low–Moderate,12,Medium,1.24,Q2
+910582,1,1,3,2,2,2,2,1,0,Low–Moderate,14,High-Medium,1.807,Q3
+910583,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+908173,1,3,1,2,1,1,2,1,0,Low–Moderate,12,Medium,1.438,Q2
+901178,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+904174,1,1,1,1,1,2,1,1,0,Low–Moderate,9,Low,1.153,Q1 (Low)
+910199,1,2,3,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.198,Q2
+908403,3,2,1,2,1,1,1,1,0,Low–Moderate,12,Medium,1.33,Q2
+909438,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+906443,1,1,2,2,1,2,2,2,0,Low–Moderate,13,Medium,1.652,Q3
+912441,2,3,1,3,1,1,1,1,0,Low–Moderate,13,Medium,1.51,Q3
+912465,1,1,1,1,2,1,1,1,0,Low–Moderate,9,Low,1.228,Q1 (Low)
+910553,1,1,2,3,2,1,1,1,0,Low–Moderate,12,Medium,1.612,Q2
+901548,3,3,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.304,Q3
+911373,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907388,5,2,2,1,1,1,1,1,0,Low–Moderate,14,High-Medium,1.334,Q3
+912385,2,2,2,1,2,1,1,1,0,Low–Moderate,12,Medium,1.412,Q2
+911379,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+908383,3,1,1,2,1,2,2,1,0,Low–Moderate,13,Medium,1.551,Q3
+907401,1,1,1,1,1,1,1,2,0,Low–Moderate,9,Low,1.137,Q1 (Low)
+907400,1,2,2,1,1,2,2,1,0,Low–Moderate,12,Medium,1.425,Q2
+909388,2,2,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.12,Q1 (Low)
+912524,1,3,1,2,1,4,4,2,-1,,18,High,2.31,Q4 (High)
+911512,1,3,1,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.3,Q2
+908518,2,2,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.184,Q2
+912527,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+908519,1,1,1,1,4,1,1,1,0,Low–Moderate,11,Low-Medium,1.684,Q2
+905030,1,1,3,1,1,1,1,2,0,Low–Moderate,11,Low-Medium,1.265,Q2
+909047,4,4,3,2,5,4,4,1,-1,,27,High,3.433,Q4 (High)
+911033,2,2,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.184,Q2
+908046,2,2,2,2,1,1,1,1,0,Low–Moderate,12,Medium,1.344,Q2
+911039,1,2,2,2,3,2,2,2,0,Low–Moderate,16,High,2.178,Q4 (High)
+908043,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+903047,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+904045,4,3,1,1,1,1,1,1,0,Low–Moderate,13,Medium,1.29,Q3
+908042,1,2,2,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.134,Q1 (Low)
+905037,5,1,3,1,1,1,1,1,0,Low–Moderate,14,High-Medium,1.328,Q3
+907039,2,3,2,1,1,2,2,1,0,Low–Moderate,14,High-Medium,1.545,Q3
+911029,1,1,1,1,1,1,1,2,0,Low–Moderate,9,Low,1.137,Q1 (Low)
+906037,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+910043,2,2,2,2,1,1,1,1,0,Low–Moderate,12,Medium,1.344,Q2
+905043,2,1,2,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.114,Q1 (Low)
+911030,1,2,2,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.294,Q2
+909039,2,2,1,1,1,2,1,1,0,Low–Moderate,11,Low-Medium,1.273,Q2
+911034,2,2,3,2,2,2,2,2,0,Low–Moderate,17,High,2.064,Q4 (High)
+903044,3,3,3,1,1,2,2,2,0,Low–Moderate,17,High,1.796,Q4 (High)
+908044,2,4,1,1,1,2,2,1,0,Low–Moderate,14,High-Medium,1.551,Q3
+908053,2,2,1,2,1,2,1,1,0,Low–Moderate,12,Medium,1.433,Q2
+907358,1,1,2,2,2,1,1,2,0,Low–Moderate,12,Medium,1.589,Q2
+909358,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+912020,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+907047,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+902050,3,2,2,2,1,3,3,3,0,Low–Moderate,19,High,2.25,Q4 (High)
+910076,2,1,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.05,Q1 (Low)
+910075,2,2,2,1,1,3,3,3,-1,,17,High,2.04,Q4 (High)
+910077,2,4,2,3,1,3,2,2,0,Low–Moderate,19,High,2.225,Q4 (High)
+910617,1,4,3,1,2,1,1,1,0,Low–Moderate,14,High-Medium,1.566,Q3
+906631,3,2,3,1,2,1,1,1,0,Low–Moderate,14,High-Medium,1.526,Q3
+907631,1,2,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.07,Q1 (Low)
+903625,1,1,2,2,2,2,1,2,0,Low–Moderate,13,Medium,1.742,Q3
+902625,2,2,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.12,Q1 (Low)
+906626,1,1,2,2,1,2,1,1,0,Low–Moderate,11,Low-Medium,1.377,Q2
+905634,4,1,1,2,3,2,1,1,0,Low–Moderate,15,High-Medium,1.919,Q4 (High)
+902621,1,1,3,1,1,2,2,2,0,Low–Moderate,13,Medium,1.556,Q3
+912629,4,4,3,2,3,2,2,1,0,Low–Moderate,21,High,2.395,Q4 (High)
+908629,2,3,1,3,2,1,1,1,0,Low–Moderate,14,High-Medium,1.738,Q3
+912639,2,1,2,2,2,2,1,1,0,Low–Moderate,13,Medium,1.655,Q3
+907625,5,1,2,2,1,2,2,1,0,Low–Moderate,16,High,1.715,Q4 (High)
+910625,2,2,3,1,1,1,1,1,0,Low–Moderate,12,Medium,1.248,Q2
+910626,3,2,3,1,2,4,4,4,-1,,23,High,2.81,Q4 (High)
+910618,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+907630,1,3,1,1,2,1,1,1,0,Low–Moderate,11,Low-Medium,1.368,Q2
+906627,2,2,1,3,2,2,1,1,0,Low–Moderate,14,High-Medium,1.821,Q3
+909629,1,2,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.07,Q1 (Low)
+910647,1,1,3,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.128,Q1 (Low)
+908660,1,1,4,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.192,Q2
+905650,1,1,1,1,1,1,2,1,0,Low–Moderate,9,Low,1.138,Q1 (Low)
+907663,2,1,2,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.114,Q1 (Low)
+911644,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+910658,5,3,2,2,1,1,2,1,0,Low–Moderate,17,High,1.702,Q4 (High)
+905663,1,4,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.21,Q2
+908658,1,4,1,2,1,3,4,2,-1,,18,High,2.227,Q4 (High)
+912659,4,2,2,1,1,2,2,1,0,Low–Moderate,15,High-Medium,1.575,Q4 (High)
+906665,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+903652,4,3,1,3,3,3,2,2,0,Low–Moderate,21,High,2.647,Q4 (High)
+912654,4,2,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.284,Q3
+911665,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+905651,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+911649,2,2,1,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.28,Q2
+901652,1,1,2,2,2,2,2,2,0,Low–Moderate,14,High-Medium,1.88,Q3
+912649,1,4,2,2,2,2,2,2,0,Low–Moderate,17,High,2.09,Q4 (High)
+910666,3,1,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.164,Q2
+911650,3,4,1,1,2,2,2,2,0,Low–Moderate,17,High,1.966,Q4 (High)
+909651,2,3,2,2,2,4,4,4,-1,,23,High,2.926,Q4 (High)
+911666,2,1,1,2,2,1,1,1,0,Low–Moderate,11,Low-Medium,1.438,Q2
+908661,1,3,2,1,1,4,4,1,-1,,17,High,2.077,Q4 (High)
+902665,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+905652,2,1,1,1,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.278,Q1 (Low)
+911640,4,3,1,1,1,1,1,1,0,Low–Moderate,13,Medium,1.29,Q3
+903661,2,3,1,1,2,1,1,1,0,Low–Moderate,12,Medium,1.418,Q2
+904650,4,2,2,2,1,1,1,1,0,Low–Moderate,14,High-Medium,1.444,Q3
+912648,1,1,3,2,1,2,1,2,0,Low–Moderate,13,Medium,1.578,Q3
+912652,5,5,4,3,5,3,3,3,-1,,31,High,3.76,Q4 (High)
+901658,2,2,1,3,1,1,1,1,0,Low–Moderate,12,Medium,1.44,Q2
+911664,1,4,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.21,Q2
+912666,5,1,1,1,1,2,2,2,0,Low–Moderate,15,High-Medium,1.628,Q4 (High)
+904664,2,2,2,2,2,2,2,1,0,Low–Moderate,15,High-Medium,1.863,Q4 (High)
+903019,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+911050,5,3,1,1,1,1,1,1,0,Low–Moderate,14,High-Medium,1.34,Q3
+909061,1,3,4,1,3,2,2,2,0,Low–Moderate,18,High,2.216,Q4 (High)
+906058,4,1,1,2,2,1,1,1,0,Low–Moderate,13,Medium,1.538,Q3
+909064,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+910066,1,1,1,1,1,2,1,1,0,Low–Moderate,9,Low,1.153,Q1 (Low)
+905060,4,3,2,2,1,1,1,1,0,Low–Moderate,15,High-Medium,1.514,Q4 (High)
+903062,1,5,1,1,1,1,1,1,0,Low–Moderate,12,Medium,1.28,Q2
+902067,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+911181,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+908195,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+902210,4,1,1,1,1,1,2,1,0,Low–Moderate,12,Medium,1.288,Q2
+908205,1,1,1,1,1,2,1,1,0,Low–Moderate,9,Low,1.153,Q1 (Low)
+902236,2,2,3,1,2,1,1,1,0,Low–Moderate,13,Medium,1.476,Q3
+907242,1,5,2,1,2,1,1,1,0,Low–Moderate,14,High-Medium,1.572,Q3
+911239,2,3,2,1,1,1,1,1,0,Low–Moderate,12,Medium,1.254,Q2
+912531,4,3,3,1,1,2,2,3,0,Low–Moderate,19,High,1.983,Q4 (High)
+911517,3,1,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.1,Q1 (Low)
+911494,4,4,3,2,1,1,1,1,0,Low–Moderate,17,High,1.648,Q4 (High)
+907495,1,1,3,3,1,1,1,1,0,Low–Moderate,12,Medium,1.448,Q2
+910497,5,4,4,2,2,1,1,1,0,Low–Moderate,20,High,1.99,Q4 (High)
+902387,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+911406,2,4,2,2,1,1,1,1,0,Low–Moderate,14,High-Medium,1.484,Q3
+909401,2,5,3,2,1,1,1,2,0,Low–Moderate,17,High,1.755,Q4 (High)
+906411,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+904412,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+909403,1,1,1,2,2,4,4,2,-1,,17,High,2.398,Q4 (High)
+906413,2,1,2,1,3,1,1,1,0,Low–Moderate,12,Medium,1.57,Q2
+901410,4,2,1,1,1,2,2,2,0,Low–Moderate,15,High-Medium,1.648,Q4 (High)
+904409,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+904411,3,3,1,1,1,1,1,1,0,Low–Moderate,12,Medium,1.24,Q2
+902417,5,1,1,2,1,1,1,1,0,Low–Moderate,13,Medium,1.36,Q3
+910502,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907506,1,3,2,2,2,2,1,2,0,Low–Moderate,15,High-Medium,1.882,Q4 (High)
+905502,3,3,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.304,Q3
+902512,2,3,2,2,1,1,1,1,0,Low–Moderate,13,Medium,1.414,Q3
+907508,2,1,2,2,2,3,1,2,0,Low–Moderate,15,High-Medium,1.945,Q4 (High)
+912508,4,1,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.15,Q2
+905491,2,1,2,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.274,Q2
+912502,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+908521,1,1,1,2,2,2,2,1,0,Low–Moderate,12,Medium,1.679,Q2
+911516,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+901560,4,2,1,1,1,1,1,1,0,Low–Moderate,12,Medium,1.22,Q2
+902577,5,2,2,1,1,4,3,2,-1,,20,High,2.206,Q4 (High)
+901561,2,1,2,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.114,Q1 (Low)
+909570,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+908566,2,3,3,2,1,1,2,2,0,Low–Moderate,16,High,1.753,Q4 (High)
+909592,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+910555,1,2,2,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.134,Q1 (Low)
+909559,3,3,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.304,Q3
+907612,2,2,2,1,1,4,4,1,0,Low–Moderate,17,High,2.057,Q4 (High)
+901615,5,4,1,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.41,Q4 (High)
+908612,4,3,3,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.418,Q4 (High)
+904347,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+905355,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+905354,1,2,2,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.134,Q1 (Low)
+910480,1,2,2,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.294,Q2
+912479,2,4,2,2,2,1,1,1,0,Low–Moderate,15,High-Medium,1.712,Q4 (High)
+910492,2,2,2,2,1,1,1,1,0,Low–Moderate,12,Medium,1.344,Q2
+910489,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+905485,1,2,4,1,1,1,1,1,0,Low–Moderate,12,Medium,1.262,Q2
+906488,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+905472,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906484,1,5,1,1,1,1,1,1,0,Low–Moderate,12,Medium,1.28,Q2
+910483,1,1,2,3,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.384,Q2
+908483,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+910478,1,3,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.204,Q2
+905483,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+903486,1,2,2,2,2,2,1,1,0,Low–Moderate,13,Medium,1.675,Q3
+906486,2,1,2,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.274,Q2
+901490,2,1,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.05,Q1 (Low)
+906495,4,1,1,1,2,1,1,1,0,Low–Moderate,12,Medium,1.378,Q2
+906496,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+912480,4,2,1,2,1,2,1,1,0,Low–Moderate,14,High-Medium,1.533,Q3
+912497,2,2,2,2,3,2,2,1,0,Low–Moderate,16,High,2.091,Q4 (High)
+908507,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901506,3,3,3,1,1,1,1,1,0,Low–Moderate,14,High-Medium,1.368,Q3
+904504,1,2,3,1,1,1,1,2,0,Low–Moderate,12,Medium,1.335,Q2
+901602,2,2,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.184,Q2
+912600,4,4,2,1,1,2,2,1,0,Low–Moderate,17,High,1.715,Q4 (High)
+905605,5,1,1,2,2,2,2,2,0,Low–Moderate,17,High,2.016,Q4 (High)
+910598,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+911603,1,3,3,1,1,1,1,1,0,Low–Moderate,12,Medium,1.268,Q2
+901349,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+902363,2,2,1,1,2,2,1,2,0,Low–Moderate,13,Medium,1.638,Q3
+909204,5,3,2,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.404,Q4 (High)
+912206,1,4,2,1,1,1,1,1,0,Low–Moderate,12,Medium,1.274,Q2
+902209,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906209,2,2,2,2,1,1,1,1,0,Low–Moderate,12,Medium,1.344,Q2
+905231,1,4,1,1,1,2,1,1,0,Low–Moderate,12,Medium,1.363,Q2
+908526,1,2,1,1,2,2,2,1,0,Low–Moderate,12,Medium,1.589,Q2
+905208,3,1,1,1,4,1,1,1,0,Low–Moderate,13,Medium,1.784,Q3
+911202,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+905205,4,3,3,2,1,1,1,1,0,Low–Moderate,16,High,1.578,Q4 (High)
+910222,2,2,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.184,Q2
+901201,4,1,1,2,2,1,1,1,0,Low–Moderate,13,Medium,1.538,Q3
+907569,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+912573,2,4,1,2,2,3,3,1,0,Low–Moderate,18,High,2.23,Q4 (High)
+903576,1,4,2,1,1,1,2,1,0,Low–Moderate,13,Medium,1.412,Q3
+904585,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+904595,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+910589,3,3,3,1,2,1,1,1,0,Low–Moderate,15,High-Medium,1.596,Q4 (High)
+909589,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+904594,3,1,1,1,1,4,4,1,0,Low–Moderate,16,High,1.973,Q4 (High)
+911589,3,1,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.164,Q2
+902600,2,2,2,2,3,1,1,1,0,Low–Moderate,14,High-Medium,1.8,Q3
+907593,1,3,2,2,3,2,3,3,-1,,19,High,2.523,Q4 (High)
+912591,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+909586,3,3,4,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.432,Q4 (High)
+904586,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907595,3,2,2,2,2,1,2,2,0,Low–Moderate,16,High,1.897,Q4 (High)
+909583,1,3,1,2,1,2,1,1,0,Low–Moderate,12,Medium,1.453,Q2
+903592,1,5,2,1,1,2,2,2,0,Low–Moderate,16,High,1.772,Q4 (High)
+906595,1,2,1,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.23,Q1 (Low)
+904592,2,1,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.05,Q1 (Low)
+911593,1,1,1,3,2,1,1,1,0,Low–Moderate,11,Low-Medium,1.548,Q2
+908591,2,2,1,2,2,2,2,1,0,Low–Moderate,14,High-Medium,1.799,Q3
+909199,1,1,1,2,1,2,1,1,0,Low–Moderate,10,Low-Medium,1.313,Q1 (Low)
+907203,4,2,3,1,1,1,1,1,0,Low–Moderate,14,High-Medium,1.348,Q3
+904200,1,2,2,3,3,2,2,2,0,Low–Moderate,17,High,2.338,Q4 (High)
+906203,4,1,3,2,2,1,1,1,0,Low–Moderate,15,High-Medium,1.666,Q4 (High)
+909514,1,4,2,2,2,1,1,1,0,Low–Moderate,14,High-Medium,1.662,Q3
+902517,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+901514,2,2,2,2,1,1,1,1,0,Low–Moderate,12,Medium,1.344,Q2
+908514,2,2,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.184,Q2
+909509,1,1,1,3,2,1,1,1,0,Low–Moderate,11,Low-Medium,1.548,Q2
+902522,4,2,3,2,2,2,2,2,0,Low–Moderate,19,High,2.164,Q4 (High)
+904514,2,2,2,2,1,1,1,1,0,Low–Moderate,12,Medium,1.344,Q2
+904509,2,2,1,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.28,Q2
+901516,2,2,1,2,2,1,1,1,0,Low–Moderate,12,Medium,1.508,Q2
+906514,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+912518,4,3,1,2,2,3,3,1,0,Low–Moderate,19,High,2.26,Q4 (High)
+902526,4,3,1,1,1,1,1,1,0,Low–Moderate,13,Medium,1.29,Q3
+912519,3,4,2,2,1,3,2,2,0,Low–Moderate,19,High,2.115,Q4 (High)
+902524,4,2,1,3,2,2,1,1,0,Low–Moderate,16,High,1.921,Q4 (High)
+908515,1,4,3,1,3,1,1,1,0,Low–Moderate,15,High-Medium,1.794,Q4 (High)
+910510,2,1,1,2,3,3,3,3,-1,,18,High,2.522,Q4 (High)
+904511,1,1,4,1,1,1,1,2,0,Low–Moderate,12,Medium,1.329,Q2
+905520,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+905196,1,4,1,2,2,1,1,1,0,Low–Moderate,13,Medium,1.598,Q3
+909196,2,1,1,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.21,Q1 (Low)
+902191,3,1,1,2,2,2,2,1,0,Low–Moderate,14,High-Medium,1.779,Q3
+905195,3,1,1,1,3,1,1,1,0,Low–Moderate,12,Medium,1.556,Q2
+901193,2,1,1,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.21,Q1 (Low)
+907193,4,1,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.15,Q2
+906197,4,4,3,1,1,1,1,1,0,Low–Moderate,16,High,1.488,Q4 (High)
+902207,3,3,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.304,Q3
+901204,3,3,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.304,Q3
+904209,4,2,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.284,Q3
+906208,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906236,3,4,3,2,2,2,1,2,0,Low–Moderate,19,High,2.116,Q4 (High)
+910515,1,3,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.204,Q2
+910519,5,3,2,2,1,1,1,1,0,Low–Moderate,16,High,1.564,Q4 (High)
+902382,1,4,1,2,1,1,2,1,0,Low–Moderate,13,Medium,1.508,Q3
+910380,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+909556,3,5,3,2,2,2,2,2,0,Low–Moderate,21,High,2.324,Q4 (High)
+910559,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907176,1,3,2,1,3,1,1,1,0,Low–Moderate,13,Medium,1.66,Q3
+910209,1,1,1,3,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.32,Q1 (Low)
+911187,1,1,1,1,2,1,1,1,0,Low–Moderate,9,Low,1.228,Q1 (Low)
+911184,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+912185,2,5,2,2,2,1,1,1,0,Low–Moderate,16,High,1.782,Q4 (High)
+912187,1,5,1,1,1,1,1,1,0,Low–Moderate,12,Medium,1.28,Q2
+907184,2,3,2,1,1,2,2,2,0,Low–Moderate,15,High-Medium,1.682,Q4 (High)
+904189,1,3,2,2,2,2,2,2,0,Low–Moderate,16,High,2.02,Q4 (High)
+904183,1,1,4,2,1,1,1,1,0,Low–Moderate,12,Medium,1.352,Q2
+907182,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+908182,3,3,2,2,1,1,1,1,0,Low–Moderate,14,High-Medium,1.464,Q3
+902185,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+901184,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+903192,2,2,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.12,Q1 (Low)
+910203,2,5,1,1,1,1,2,1,0,Low–Moderate,14,High-Medium,1.468,Q3
+907177,4,3,1,2,2,1,1,1,0,Low–Moderate,15,High-Medium,1.678,Q4 (High)
+904178,5,4,1,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.41,Q4 (High)
+909187,2,3,3,2,2,1,1,1,0,Low–Moderate,15,High-Medium,1.706,Q4 (High)
+908180,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+903184,2,2,1,1,2,1,1,1,0,Low–Moderate,11,Low-Medium,1.348,Q2
+912191,3,2,3,3,4,1,1,1,0,Low–Moderate,18,High,2.302,Q4 (High)
+905362,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+905363,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907375,2,2,2,2,2,2,2,2,0,Low–Moderate,16,High,2,Q4 (High)
+901360,3,1,1,3,2,1,1,1,0,Low–Moderate,13,Medium,1.648,Q3
+903381,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907379,1,1,2,1,1,1,1,2,0,Low–Moderate,10,Low-Medium,1.201,Q1 (Low)
+910365,1,2,1,2,1,2,2,2,0,Low–Moderate,13,Medium,1.658,Q3
+905372,1,4,2,1,1,1,1,1,0,Low–Moderate,12,Medium,1.274,Q2
+908371,3,2,1,2,1,1,1,2,0,Low–Moderate,13,Medium,1.467,Q3
+902367,3,2,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.17,Q2
+909374,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+910368,4,1,2,2,2,1,1,1,0,Low–Moderate,14,High-Medium,1.602,Q3
+903384,1,1,1,2,3,1,1,1,0,Low–Moderate,11,Low-Medium,1.616,Q2
+910373,1,3,2,2,2,3,3,2,0,Low–Moderate,18,High,2.311,Q4 (High)
+911364,3,4,3,2,5,2,1,1,-1,,21,High,2.663,Q4 (High)
+906371,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+908365,3,1,1,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.26,Q2
+907368,2,1,1,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.21,Q1 (Low)
+901361,3,2,2,1,2,2,2,2,0,Low–Moderate,16,High,1.89,Q4 (High)
+901380,4,2,3,1,1,1,1,1,0,Low–Moderate,14,High-Medium,1.348,Q3
+902365,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906381,3,3,4,4,1,1,1,1,0,Low–Moderate,18,High,1.912,Q4 (High)
+902364,4,1,3,1,1,1,1,1,0,Low–Moderate,13,Medium,1.278,Q3
+904364,1,3,1,2,2,1,1,1,0,Low–Moderate,12,Medium,1.528,Q2
+903365,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+908363,1,2,2,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.134,Q1 (Low)
+905380,2,4,2,1,2,2,2,1,0,Low–Moderate,16,High,1.843,Q4 (High)
+911383,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+911387,1,5,2,1,1,1,2,2,0,Low–Moderate,15,High-Medium,1.619,Q4 (High)
+902503,1,1,1,2,2,1,2,1,0,Low–Moderate,11,Low-Medium,1.526,Q2
+902502,2,2,2,1,1,2,1,1,0,Low–Moderate,12,Medium,1.337,Q2
+903496,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+903510,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+903355,4,2,3,2,1,2,1,1,0,Low–Moderate,16,High,1.661,Q4 (High)
+905360,2,1,3,1,1,2,1,2,0,Low–Moderate,13,Medium,1.468,Q3
+901358,1,1,4,2,1,1,1,1,0,Low–Moderate,12,Medium,1.352,Q2
+908361,4,3,3,1,1,2,2,2,0,Low–Moderate,18,High,1.846,Q4 (High)
+912002,3,3,2,1,2,1,1,1,0,Low–Moderate,14,High-Medium,1.532,Q3
+908373,1,4,2,3,2,4,4,1,-1,,21,High,2.695,Q4 (High)
+902416,2,3,2,2,1,1,2,1,0,Low–Moderate,14,High-Medium,1.552,Q3
+905409,2,1,3,2,1,1,1,1,0,Low–Moderate,12,Medium,1.338,Q2
+907414,3,1,2,2,1,1,1,1,0,Low–Moderate,12,Medium,1.324,Q2
+903412,3,3,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.304,Q3
+905411,4,1,1,1,2,1,1,1,0,Low–Moderate,12,Medium,1.378,Q2
+905413,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+906415,2,2,2,2,2,2,2,2,0,Low–Moderate,16,High,2,Q4 (High)
+909192,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+902211,2,2,3,2,1,1,2,1,0,Low–Moderate,14,High-Medium,1.546,Q3
+912335,1,2,2,2,2,1,1,1,0,Low–Moderate,12,Medium,1.522,Q2
+909342,1,1,3,1,4,1,1,1,0,Low–Moderate,13,Medium,1.812,Q3
+901333,3,1,1,1,1,2,1,1,0,Low–Moderate,11,Low-Medium,1.253,Q2
+910354,4,3,1,1,1,1,1,1,0,Low–Moderate,13,Medium,1.29,Q3
+909332,1,4,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.21,Q2
+910353,4,5,1,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.43,Q4 (High)
+905334,3,2,1,2,1,1,1,1,0,Low–Moderate,12,Medium,1.33,Q2
+911341,3,2,4,1,1,1,1,2,0,Low–Moderate,15,High-Medium,1.499,Q4 (High)
+907342,2,3,1,2,1,1,1,1,0,Low–Moderate,12,Medium,1.35,Q2
+911339,3,2,3,1,1,2,1,1,0,Low–Moderate,14,High-Medium,1.451,Q3
+911333,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+902340,1,2,2,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.134,Q1 (Low)
+901338,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+909336,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+907351,3,3,3,1,2,1,1,1,0,Low–Moderate,15,High-Medium,1.596,Q4 (High)
+912350,4,4,3,1,1,1,1,1,0,Low–Moderate,16,High,1.488,Q4 (High)
+912349,3,3,4,1,1,1,1,2,0,Low–Moderate,16,High,1.569,Q4 (High)
+908344,4,3,2,1,1,1,1,1,0,Low–Moderate,14,High-Medium,1.354,Q3
+904342,1,1,1,1,2,4,1,2,-1,,13,Medium,1.824,Q3
+907338,2,2,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.184,Q2
+908333,3,2,3,1,1,2,2,1,0,Low–Moderate,15,High-Medium,1.589,Q4 (High)
+905333,1,4,1,1,1,2,2,1,0,Low–Moderate,13,Medium,1.501,Q3
+908337,1,3,3,2,1,1,1,1,0,Low–Moderate,13,Medium,1.428,Q3
+909346,3,2,3,3,3,1,1,1,0,Low–Moderate,17,High,2.074,Q4 (High)
+909356,3,2,1,1,1,2,2,1,0,Low–Moderate,13,Medium,1.461,Q3
+903350,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+912438,2,2,3,1,1,2,2,1,0,Low–Moderate,14,High-Medium,1.539,Q3
+909442,1,5,2,2,3,1,1,1,0,Low–Moderate,16,High,1.96,Q4 (High)
+910437,1,1,1,2,1,2,1,1,0,Low–Moderate,10,Low-Medium,1.313,Q1 (Low)
+904450,2,2,2,1,2,4,4,2,-1,,19,High,2.422,Q4 (High)
+908471,2,2,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.12,Q1 (Low)
+902478,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901482,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906479,1,1,1,1,3,1,1,1,0,Low–Moderate,10,Low-Medium,1.456,Q1 (Low)
+903415,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+905414,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+908423,1,4,3,1,1,1,1,1,0,Low–Moderate,13,Medium,1.338,Q3
+908425,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+911430,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+904420,5,4,1,1,2,1,1,1,0,Low–Moderate,16,High,1.638,Q4 (High)
+906429,5,4,2,2,2,1,1,1,0,Low–Moderate,18,High,1.862,Q4 (High)
+902421,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+908428,5,4,4,3,2,1,1,1,-1,,21,High,2.15,Q4 (High)
+908432,2,2,2,2,1,1,1,1,0,Low–Moderate,12,Medium,1.344,Q2
+911428,1,2,3,2,1,2,2,2,0,Low–Moderate,15,High-Medium,1.786,Q4 (High)
+907424,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+904418,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901419,1,4,2,2,1,2,1,1,0,Low–Moderate,14,High-Medium,1.587,Q3
+907421,2,2,2,2,1,1,1,1,0,Low–Moderate,12,Medium,1.344,Q2
+911432,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+907434,3,2,2,1,2,1,1,1,0,Low–Moderate,13,Medium,1.462,Q3
+912428,2,1,1,2,1,1,2,1,0,Low–Moderate,11,Low-Medium,1.348,Q2
+902434,1,1,2,1,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.292,Q1 (Low)
+909432,5,2,4,1,2,1,1,1,0,Low–Moderate,17,High,1.69,Q4 (High)
+905434,1,4,2,2,2,1,2,2,0,Low–Moderate,16,High,1.937,Q4 (High)
+905431,2,3,1,1,2,2,2,2,0,Low–Moderate,15,High-Medium,1.846,Q4 (High)
+910429,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+911437,2,4,2,2,1,3,2,1,0,Low–Moderate,17,High,1.928,Q4 (High)
+905430,2,1,2,2,2,2,1,2,0,Low–Moderate,14,High-Medium,1.792,Q3
+909423,2,2,2,1,2,1,2,1,0,Low–Moderate,13,Medium,1.55,Q3
+909430,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+904436,4,2,2,2,1,1,1,1,0,Low–Moderate,14,High-Medium,1.444,Q3
+909431,4,3,2,2,2,2,2,1,0,Low–Moderate,18,High,2.033,Q4 (High)
+904432,1,1,1,2,1,2,2,1,0,Low–Moderate,11,Low-Medium,1.451,Q2
+910436,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906431,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+912427,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907429,2,2,1,2,1,2,1,1,0,Low–Moderate,12,Medium,1.433,Q2
+911439,2,1,2,2,3,1,1,1,0,Low–Moderate,13,Medium,1.73,Q3
+911441,3,3,2,1,1,3,2,1,0,Low–Moderate,16,High,1.748,Q4 (High)
+901440,2,3,3,2,1,4,2,4,-1,,21,High,2.486,Q4 (High)
+912478,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+911477,1,5,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.344,Q3
+904218,5,3,2,1,1,2,1,1,0,Low–Moderate,16,High,1.557,Q4 (High)
+908237,2,4,1,1,3,1,2,2,0,Low–Moderate,16,High,1.991,Q4 (High)
+908248,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+901245,1,1,2,2,2,1,1,1,0,Low–Moderate,11,Low-Medium,1.452,Q2
+904246,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+910259,1,2,2,2,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.294,Q2
+905243,1,1,1,3,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.32,Q1 (Low)
+911244,1,1,1,1,1,2,2,1,0,Low–Moderate,10,Low-Medium,1.291,Q1 (Low)
+904245,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+905249,1,4,2,1,1,2,1,1,0,Low–Moderate,13,Medium,1.427,Q3
+906187,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+903194,2,3,2,2,1,2,2,2,0,Low–Moderate,16,High,1.842,Q4 (High)
+908211,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+911213,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+912219,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+911221,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+904231,2,2,2,2,2,2,1,1,0,Low–Moderate,14,High-Medium,1.725,Q3
+906226,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+907229,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+911228,5,1,2,1,1,1,1,1,0,Low–Moderate,13,Medium,1.264,Q3
+904234,1,3,2,1,1,1,2,2,0,Low–Moderate,13,Medium,1.479,Q3
+907232,1,4,1,2,2,1,1,1,0,Low–Moderate,13,Medium,1.598,Q3
+901223,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+907226,5,4,1,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.41,Q4 (High)
+902233,2,1,1,1,1,2,2,2,0,Low–Moderate,12,Medium,1.478,Q2
+901233,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+904351,1,1,1,3,1,2,2,2,0,Low–Moderate,13,Medium,1.748,Q3
+906395,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+901396,1,1,2,2,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.224,Q1 (Low)
+908509,2,1,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.05,Q1 (Low)
+905501,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+904506,3,3,3,1,1,1,1,1,0,Low–Moderate,14,High-Medium,1.368,Q3
+910505,3,2,1,2,1,2,1,1,0,Low–Moderate,13,Medium,1.483,Q3
+904505,2,5,2,2,1,2,2,1,0,Low–Moderate,17,High,1.845,Q4 (High)
+910504,2,2,2,4,2,2,2,2,0,Low–Moderate,18,High,2.32,Q4 (High)
+908392,2,1,1,2,1,2,1,1,0,Low–Moderate,11,Low-Medium,1.363,Q2
+903395,4,4,2,2,1,4,4,1,-1,,22,High,2.457,Q4 (High)
+903396,1,2,2,2,1,2,2,1,0,Low–Moderate,13,Medium,1.585,Q3
+912393,2,1,2,1,2,1,1,1,0,Low–Moderate,11,Low-Medium,1.342,Q2
+909387,5,2,3,1,1,1,1,1,0,Low–Moderate,15,High-Medium,1.398,Q4 (High)
+905388,2,2,4,2,1,1,1,1,0,Low–Moderate,14,High-Medium,1.472,Q3
+905389,4,3,2,1,1,2,2,2,0,Low–Moderate,17,High,1.782,Q4 (High)
+903397,1,1,1,2,3,1,1,1,0,Low–Moderate,11,Low-Medium,1.616,Q2
+910393,2,3,2,2,1,2,2,2,0,Low–Moderate,16,High,1.842,Q4 (High)
+903493,2,2,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.12,Q1 (Low)
+901502,1,4,1,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.21,Q2
+907499,2,1,1,1,1,1,1,1,0,Low–Moderate,9,Low,1.05,Q1 (Low)
+903500,4,3,2,1,1,1,1,1,0,Low–Moderate,14,High-Medium,1.354,Q3
+902511,2,2,4,1,1,1,1,2,0,Low–Moderate,14,High-Medium,1.449,Q3
+901508,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+905499,4,4,3,3,2,2,2,2,0,Low–Moderate,22,High,2.464,Q4 (High)
+909352,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+906354,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+904375,1,1,2,1,1,1,1,1,0,Low–Moderate,9,Low,1.064,Q1 (Low)
+910384,1,3,3,1,3,2,2,2,0,Low–Moderate,17,High,2.152,Q4 (High)
+906389,1,1,1,2,2,1,1,1,0,Low–Moderate,10,Low-Medium,1.388,Q1 (Low)
+912390,1,3,1,3,3,1,1,1,0,Low–Moderate,14,High-Medium,1.916,Q3
+904384,4,3,2,4,4,2,2,2,-1,,23,High,2.946,Q4 (High)
+908406,1,1,1,2,2,2,1,2,0,Low–Moderate,12,Medium,1.678,Q2
+906391,3,2,2,2,1,2,1,2,0,Low–Moderate,15,High-Medium,1.684,Q4 (High)
+906398,1,2,2,2,2,1,1,1,0,Low–Moderate,12,Medium,1.522,Q2
+907396,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+906397,1,1,1,2,1,1,1,1,0,Low–Moderate,9,Low,1.16,Q1 (Low)
+905386,2,1,3,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.178,Q2
+905563,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+902585,1,3,1,1,1,1,1,1,0,Low–Moderate,10,Low-Medium,1.14,Q1 (Low)
+906586,2,2,3,4,1,1,1,1,0,Low–Moderate,15,High-Medium,1.728,Q4 (High)
+912577,2,5,1,5,2,3,4,2,-1,,24,High,3.055,Q4 (High)
+908577,1,1,2,2,1,1,1,2,0,Low–Moderate,11,Low-Medium,1.361,Q2
+912576,4,3,2,2,1,1,1,1,0,Low–Moderate,15,High-Medium,1.514,Q4 (High)
+911583,2,2,1,1,2,1,1,1,0,Low–Moderate,11,Low-Medium,1.348,Q2
+905584,1,1,1,2,2,4,1,1,0,Low–Moderate,13,Medium,1.847,Q3
+902586,1,3,2,1,1,1,1,1,0,Low–Moderate,11,Low-Medium,1.204,Q2
+905577,1,4,1,2,1,1,2,1,0,Low–Moderate,13,Medium,1.508,Q3
+901570,3,4,2,2,1,1,1,1,0,Low–Moderate,15,High-Medium,1.534,Q4 (High)
+902362,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+911455,2,1,2,2,2,2,2,2,0,Low–Moderate,15,High-Medium,1.93,Q4 (High)
+910442,1,1,1,1,1,1,1,1,0,Low–Moderate,8,Low,1,Q1 (Low)
+910441,4,3,2,1,1,1,1,2,0,Low–Moderate,15,High-Medium,1.491,Q4 (High)
