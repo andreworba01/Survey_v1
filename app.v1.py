@@ -228,17 +228,8 @@ elif page == "🗺️ Regional Risk Map":
         total_responses=("mean_score", "count")
     ).reset_index()
 
-    # Add risk categories (based on tertiles)
-    tertiles = df_region_stats["avg_score"].quantile([0.33, 0.66]).values
-    def classify_risk(score):
-        if score <= tertiles[0]:
-            return "Low"
-        elif score <= tertiles[1]:
-            return "Medium"
-        else:
-            return "High"
-
-    df_region_stats["region_level_risk"] = df_region_stats["avg_score"].apply(classify_risk)
+    # Add risk categories
+    df_region_stats["region_level_risk"] = df_region_stats["avg_score"].apply(categorize)
 
     # Merge back to original to assign avg_score per region to each county
     df_map1 =  df_map1.merge(df_region_stats[["region", "avg_score", "region_level_risk"]], on="region", how="left")
