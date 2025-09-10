@@ -47,7 +47,7 @@ SCORE_COL = "Weighted_Score" if "Weighted_Score" in df_scores.columns else (
 # ================================
 # 3) Sidebar
 # ================================
-page = st.sidebar.radio("📑 Select View", ["📊 Individual Risk (Manual Scale)", "🗺️ County Risk Map"])
+page = st.sidebar.radio("📑 Select View", ["📊 Individual Risk (Manual Scale)", "🗺️ County Risk Map", "🗺️ Regional Risk Map"])
 
 # ================================
 # 4) PAGE 1 — Individual
@@ -196,3 +196,63 @@ elif page == "🗺️ County Risk Map":
         f"Cuts — Very Low ≤ {THRESHOLDS['p35']:.3f} < Low ≤ {THRESHOLDS['p70']:.3f} "
         f"< Mid-Low ≤ {THRESHOLDS['p90']:.3f} < Mid ≤ {THRESHOLDS['p99']:.3f} < High."
     )
+
+# ================================
+# 6) PAGE 3 — Regional Map
+# ================================
+elif page == "🗺️ Regional Risk Map":
+    st.title("🗺️ Nebraska Regions — Mean Weighted Score (Standardized)")
+    
+    st.markdown("This map shows the average standardized microplastic exposure risk per region in Nebraska.")
+
+    # Define NE region geometries (manually or load GeoJSON)
+    region_geojson_url = "https://raw.githubusercontent.com/andrewraynes/nebraska-regions/main/ne_regions.geojson"
+
+    # Load GeoJSON
+    with urlopen(region_geojson_url) as r:
+        regions_geo = json.load(r)
+
+    # Create DataFrame with regional summary
+    region_df = pd.DataFrame({
+        "ne_region": ["Mid-Plains", "Metro", "Western", "Central", "Northeast", "Southeast"],
+        "avg_score": [0.146, 0.145, 0.135, 0.130, 0.130, 0.118],
+        "sd_score":  [0.094, 0.020, 0.028, 0.051, 0.059, 0.036],
+        "total_responses": [161, 351, 181, 321, 163, 441],
+        "n_counties": [13, 4, 10, 23, 17, 16]
+    })
+
+    # Categorize by thresholds
+    region_df["Risk_Level"] = region_df["avg_score"].apply(lambda x: categorize(x, THRESHOLDS))
+
+    # For hover tooltips
+    region_df["Region"] = region_df["ne_region"]
+    region_df["Mean Score"] = region_df["avg_score"]
+    region_df["Std Dev"] = region_df["sd_score"]
+
+    # Create map
+    fig = px.choropleth(
+        region_df,
+        geojson=regions_geo,
+        locations="ne_region",
+        featureidkey="properties.ne_region",
+        color="avg_score",
+        color_continuous_scale="YlOrRd",
+        range_color=(region_df["avg_score"].min(), region_df["avg_score"].max()),
+        labels={"avg_score": "Avg Score"},
+        hover_data=["Region", "Mean Score", "Std Dev", "total_responses", "n_counties"],
+    )
+
+    fig.update_geos(fitbounds="locations", visible=False)
+    fig.update_layout(
+        title="📍 Nebraska Regions — Mean Weighted Score (Standardized)",
+        margin=dict(r=0, t=40, l=0, b=0)
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.caption(
+        f"Manual categories: {ORDER}. "
+        f"Cuts — Very Low ≤ {THRESHOLDS['p35']:.3f} < Low ≤ {THRESHOLDS['p70']:.3f} "
+        f"< Mid-Low ≤ {THRESHOLDS['p90']:.3f} < Mid ≤ {THRESHOLDS['p99']:.3f} < High."
+    )
+
