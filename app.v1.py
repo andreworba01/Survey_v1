@@ -264,7 +264,7 @@ elif page == "🗺️ Regional Risk Map":
     st.plotly_chart(fig, use_container_width=True)
 
     st.dataframe(df_region_stats.rename(columns={
-        "avg score": "Region Avg Score",
+        "Avg score": "Region Avg Score",
         "sd score": "Std Dev",
-        "total Responses": "n_counties"
+        "Total Responses": "n_counties"
     }))
