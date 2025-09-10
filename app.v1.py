@@ -94,7 +94,7 @@ if page == "📊 Individual Risk (Manual Scale)":
     }
 
     # Map raw scores
-    responses_raw = np.array([
+    responses = np.array([
         map_5pt[q1], map_5pt[q2], map_4pt[q3], map_5pt[q4],
         map_5pt[q5], map_4pt[q6], map_4pt[q7], map_4pt[q8]
     ], dtype=float)
@@ -111,12 +111,10 @@ if page == "📊 Individual Risk (Manual Scale)":
         (map_4pt[q8] - 1) / 3
     ], dtype=float)
     
-    # Weight vector (same as W in your original)
-    W_std = np.array([0.05, 0.07, 0.064, 0.16, 0.228, 0.153, 0.138, 0.137])
     
     # Compute standardized weighted score
     if st.button("🔍 Compute Weighted Score & Category"):
-        user_score_std = float(np.dot(responses_std, W_std))  # standardized
+        user_score_std = float(np.dot(responses_std, W))  # standardized
         user_cat = categorize(user_score_std)
     
         st.success(f"🧮 Standardized weighted score: **{user_score_std:.3f}**  →  **{user_cat}**")
