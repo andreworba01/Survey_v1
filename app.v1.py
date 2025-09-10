@@ -228,8 +228,21 @@ elif page == "🗺️ Regional Risk Map":
         total_responses=("mean_score", "count")
     ).reset_index()
 
+    # Add risk categories (based on tertiles)
+    tertiles = df_region_stats["avg_score"].quantile([0.33, 0.66]).values
+    def classify_risk(score):
+        if score <= tertiles[0]:
+            return "Low"
+        elif score <= tertiles[1]:
+            return "Medium"
+        else:
+            return "High"
+
+    df_region_stats["region_level_risk"] = df_region_stats["avg_score"].apply(classify_risk)
+
     # Merge back to original to assign avg_score per region to each county
-    df_map1 = df_map1.merge(df_region_stats[["region", "avg_score"]], on="region", how="left", suffixes=("", "_region"))
+    df_map1 =  df_map1.merge(df_region_stats[["region", "avg_score", "region_level_risk"]], on="region", how="left")
+
 
     # Plot using region average per-county
     fig = px.choropleth(
@@ -237,11 +250,11 @@ elif page == "🗺️ Regional Risk Map":
         geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
         locations="fips",
         color="avg_score",
-        color_continuous_scale="YlOrRd",
+        color_continuous_scale="BuGn",
         range_color=(df_map1["avg_score"].min(), df_map1["avg_score"].max()),
         scope="usa",
-        labels={"avg_score": "Regional Avg Score"},
-        hover_data=["county", "region", "mean_score"]
+        labels={"avg score": "Regional Avg Score"},
+        hover_data=["county", "region", "mean_score", "region_level_risk"]
     )
 
     fig.update_geos(fitbounds="locations", visible=False)
@@ -253,7 +266,7 @@ elif page == "🗺️ Regional Risk Map":
     st.plotly_chart(fig, use_container_width=True)
 
     st.dataframe(df_region_stats.rename(columns={
-        "avg_score": "Region Avg Score",
-        "sd_score": "Std Dev",
-        "total_responses": "n_counties"
+        "avg score": "Region Avg Score",
+        "sd score": "Std Dev",
+        "total Responses": "n_counties"
     }))
