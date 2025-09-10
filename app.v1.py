@@ -113,11 +113,11 @@ if page == "📊 Individual Risk (Manual Scale)":
     
     
     # Compute standardized weighted score
-    if st.button("🔍 Compute Weighted Score & Category"):
-        user_score_std = float(np.dot(responses_std, W))  # standardized
-        user_cat = categorize(user_score_std)
-    
-        st.success(f"🧮 Standardized weighted score: **{user_score_std:.3f}**  →  **{user_cat}**")
+        if st.button("🔍 Compute Weighted Score & Category"):
+            user_score_std = float(np.dot(responses_std, W))  # standardized
+            user_cat = categorize(user_score_std)
+        
+            st.success(f"🧮 Standardized weighted score: **{user_score_std:.3f}**  →  **{user_cat}**")
         
         # --- Distribution with user's score ---
         hist_x = df_scores[SCORE_COL].dropna()
