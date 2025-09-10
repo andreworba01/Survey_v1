@@ -237,15 +237,20 @@ elif page == "🗺️ Regional Risk Map":
 
     # Plot using region average per-county
     fig = px.choropleth(
-        df_map1,
-        geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
+        df_map,
+        geojson=ne_counties_geojson,
         locations="fips",
         color="avg_score",
-        color_continuous_scale="BuGn",
-        range_color=(df_map1["avg_score"].min(), df_map1["avg_score"].max()),
-        scope="usa",
-        labels={"avg score": "Regional Avg Score"},
-        hover_data=["county", "region", "mean_score", "region_level_risk"]
+        hover_name="county",
+        hover_data={
+            "fips": False,
+            "county": True,
+            "region": True,
+            "mean_score": ": .3f",  # ← 3 decimals
+            "region_level_risk": True,
+            "avg_score": ": .3f",   # ← 3 decimals
+        },
+        color_continuous_scale="BuGn"
     )
 
     fig.update_geos(fitbounds="locations", visible=False)
