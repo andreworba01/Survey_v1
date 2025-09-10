@@ -202,73 +202,58 @@ elif page == "🗺️ County Risk Map":
 # ================================
 elif page == "🗺️ Regional Risk Map":
     st.title("🗺️ Nebraska Regions — Mean Weighted Score (Standardized)")
+    st.markdown("This map shows each county colored by its region's average standardized risk score.")
 
-    st.markdown("This map shows the average standardized microplastic exposure risk per region in Nebraska.")
-
-    # Load regional geometry
-    region_geojson_url = "https://raw.githubusercontent.com/andrewraynes/nebraska-regions/main/ne_regions.geojson"
-    with urlopen(region_geojson_url) as r:
-        regions_geo = json.load(r)
+    # Load CSV
+    df_map1 = df_map.dropna(subset=["mean_score"])  # Remove counties with no score
 
     # Define regions
     regions = {
-        "Mid-Plains": ['Cherry','Hooker','Thomas','Blaine','Loup','Custer','Logan','McPherson','Lincoln','Keith','Perkins','Chase','Hayes','Frontier','Hitchcock','Red Willow','Dundy'],
-        "Metro": ['Douglas','Sarpy','Washington','Dodge'],
         "Western": ['Sioux','Dawes','Sheridan','Box Butte','Scotts Bluff','Banner','Kimball','Morrill','Garden','Cheyenne','Deuel','Grant','Arthur'],
-        "Central": ['Valley','Greeley','Sherman','Howard','Merrick','Nance','Polk','Platte','Colfax','Dawson','Buffalo','Hall','Hamilton','Phelps','Kearney','Adams','Clay','Webster','Nuckolls','Franklin','Harlan','Furnas','Gosper'],
+        "Mid-Plains": ['Cherry','Hooker','Thomas','Blaine','Loup','Custer','Logan','McPherson','Lincoln','Keith','Perkins','Chase','Hayes','Frontier','Hitchcock','Red Willow','Dundy'],
         "Northeast": ['Keya Paha','Boyd','Rock','Brown','Holt','Knox','Cedar','Dixon','Dakota','Antelope','Pierce','Wayne','Thurston','Madison','Stanton','Cuming','Burt','Boone','Garfield','Wheeler'],
-        "Southeast": ['York','Seward','Lancaster','Cass','Otoe','Johnson','Nemaha','Gage','Pawnee','Richardson','Fillmore','Saline','Jefferson','Thayer','Butler','Saunders']
+        "Central": ['Valley','Greeley','Sherman','Howard','Merrick','Nance','Polk','Platte','Colfax','Dawson','Buffalo','Hall','Hamilton','Phelps','Kearney','Adams','Clay','Webster','Nuckolls','Franklin','Harlan','Furnas','Gosper'],
+        "Southeast": ['York','Seward','Lancaster','Cass','Otoe','Johnson','Nemaha','Gage','Pawnee','Richardson','Fillmore','Saline','Jefferson','Thayer','Butler','Saunders'],
+        "Metro": ['Douglas','Sarpy','Washington','Dodge']
     }
 
-    # Load your score data
-    df_scores = df_map  # Adjust to your actual file path
-    df_scores = df_scores[['county', 'mean_score']].dropna()
-
-    # Assign region to each county
+    # Add region to df_map
     region_map = {county: region for region, counties in regions.items() for county in counties}
-    df_scores["ne_region"] = df_scores["county"].map(region_map)
+    df_map1["region"] = df_map1["county"].map(region_map)
 
-    # Group and summarize by region
-    region_df = df_scores.groupby("ne_region").agg(
+    # Group by region: calculate mean and SD
+    df_region_stats = df_map1.groupby("region").agg(
         avg_score=("mean_score", "mean"),
         sd_score=("mean_score", "std"),
-        n_counties=("county", "count")
+        total_responses=("mean_score", "count")
     ).reset_index()
 
-    # Compute total responses from another file if needed, or skip for now
-    # region_df["total_responses"] = ...  # Optional if available
+    # Merge back to original to assign avg_score per region to each county
+    df_map1 = df_map1.merge(df_region_stats[["region", "avg_score"]], on="region", how="left", suffixes=("", "_region"))
 
-    # Categorize risk level
-    region_df["Risk_Level"] = region_df["avg_score"].apply(lambda x: categorize(x, THRESHOLDS))
-
-    # Rename for hover info
-    region_df["Region"] = region_df["ne_region"]
-    region_df["Mean Score"] = region_df["avg_score"].round(3)
-    region_df["Std Dev"] = region_df["sd_score"].round(3)
-
-    # Create choropleth
+    # Plot using region average per-county
     fig = px.choropleth(
-        region_df,
-        geojson=regions_geo,
-        locations="ne_region",
-        featureidkey="properties.ne_region",
+        df_map1,
+        geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
+        locations="fips",
         color="avg_score",
         color_continuous_scale="YlOrRd",
-        range_color=(region_df["avg_score"].min(), region_df["avg_score"].max()),
-        labels={"avg_score": "Avg Score"},
-        hover_data=["Region", "Mean Score", "Std Dev", "n_counties"],
+        range_color=(df_map1["avg_score"].min(), df_map1["avg_score"].max()),
+        scope="usa",
+        labels={"avg_score": "Regional Avg Score"},
+        hover_data=["county", "region", "mean_score"]
     )
 
     fig.update_geos(fitbounds="locations", visible=False)
     fig.update_layout(
-        title="📍 Nebraska Regions — Mean Weighted Score (Standardized)",
-        margin=dict(r=0, t=40, l=0, b=0)
+        title="📍 Counties colored by Region Average Microplastic Score",
+        margin={"r":0,"t":40,"l":0,"b":0}
     )
 
     st.plotly_chart(fig, use_container_width=True)
 
-    st.caption(
-        f"Manual categories: {ORDER}. "
-        f"Cuts — Very Low ≤ {THRESHOLDS['p35']:.3f} < Low ≤ {THRESHOLDS['p70']:.3f} "
-        f"< Mid-Low ≤ {THRESHOLDS['p90']:.3f} < Mid ≤ {THRESHOLDS['p99']:.3f} < High."
-    )
+    st.dataframe(df_region_stats.rename(columns={
+        "avg_score": "Region Avg Score",
+        "sd_score": "Std Dev",
+        "total_responses": "n_counties"
+    }))
