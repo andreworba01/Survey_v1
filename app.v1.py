@@ -10,7 +10,7 @@ from urllib.request import urlopen
 # ================================
 # 1) Manual scale & thresholds
 # ================================
-ORDER = ["Low", "Mid", "Mid-High", "High", "Very High"]
+ORDER = ["Very Low", "Low", "Mid-Low", "Mid", "High"]
 
 THRESHOLDS = {
     "p10": 1.0000, "p35": 1.2533, "p50": 1.3740, "p70": 1.5380,
@@ -20,15 +20,15 @@ THRESHOLDS = {
 def categorize(score, t=THRESHOLDS):
     """Manual 5-band classifier."""
     if score <= t["p35"]:
-        return "Low"
+        return "Very Low"
     elif score <= t["p70"]:
-        return "Mid"
+        return "Low"
     elif score <= t["p90"]:
-        return "Mid-High"
+        return "Mid-Low"
     elif score <= t["p99"]:
-        return "High"
+        return "Mid"
     else:
-        return "Very High"
+        return "High"
 
 # Weights for Q73..Q80 (in this order)
 W = np.array([0.05, 0.07, 0.064, 0.16, 0.228, 0.153, 0.138, 0.137])
@@ -93,17 +93,34 @@ if page == "📊 Individual Risk (Manual Scale)":
         "5 or more days per week": 4, "3-4 days per week": 3, "1-2 days per week": 2, "Never": 1
     }
 
-    responses = np.array([
+    # Map raw scores
+    responses_raw = np.array([
         map_5pt[q1], map_5pt[q2], map_4pt[q3], map_5pt[q4],
         map_5pt[q5], map_4pt[q6], map_4pt[q7], map_4pt[q8]
     ], dtype=float)
-
+    
+    # Normalize (standardize to 0–1 range)
+    responses_std = np.array([
+        (map_5pt[q1] - 1) / 4,
+        (map_5pt[q2] - 1) / 4,
+        (map_4pt[q3] - 1) / 3,
+        (map_5pt[q4] - 1) / 4,
+        (map_5pt[q5] - 1) / 4,
+        (map_4pt[q6] - 1) / 3,
+        (map_4pt[q7] - 1) / 3,
+        (map_4pt[q8] - 1) / 3
+    ], dtype=float)
+    
+    # Weight vector (same as W in your original)
+    W_std = np.array([0.05, 0.07, 0.064, 0.16, 0.228, 0.153, 0.138, 0.137])
+    
+    # Compute standardized weighted score
     if st.button("🔍 Compute Weighted Score & Category"):
-        user_score = float(np.dot(responses, W))  # <- MANUAL weighted score
-        user_cat = categorize(user_score)
-
-        st.success(f"🧮 Weighted score: **{user_score:.3f}**  →  **{user_cat}**")
-
+        user_score_std = float(np.dot(responses_std, W_std))  # standardized
+        user_cat = categorize(user_score_std)
+    
+        st.success(f"🧮 Standardized weighted score: **{user_score_std:.3f}**  →  **{user_cat}**")
+        
         # --- Distribution with user's score ---
         hist_x = df_scores[SCORE_COL].dropna()
         # histogram trace
