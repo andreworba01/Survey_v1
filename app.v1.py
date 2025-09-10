@@ -36,7 +36,7 @@ W = np.array([0.05, 0.07, 0.064, 0.16, 0.228, 0.153, 0.138, 0.137])
 # ================================
 # 2) Load data
 # ================================
-df_scores = pd.read_csv("Exposure_with_Quartiles.csv")
+df_scores = pd.read_csv("std_scores.csv")
 df_map = pd.read_csv("Nebraska_County_Simulated_Scores.csv")
 
 # pick the score column to show in the histogram
