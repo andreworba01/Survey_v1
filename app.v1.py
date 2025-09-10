@@ -236,24 +236,25 @@ elif page == "🗺️ Regional Risk Map":
 
 
     # Plot using region average per-county
-   fig = px.choropleth(
-        df_map1,
-        geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
-        locations="fips",
-        color="avg_score",
-        color_continuous_scale="BuGn",
-        range_color=(df_map1["avg_score"].min(), df_map1["avg_score"].max()),
-        scope="usa",
-        labels={"avg_score": "Regional Avg Score"},
-        hover_data={
-            "county": True,
-            "region": True,
-            "mean_score": ':.3f',           # 3 decimal places
-            "region_level_risk": True,
-            "avg_score": ':.3f',            # 3 decimal places
-            "fips": False                   # Hide fips if not needed
-        }
-    )
+    fig = px.choropleth(
+            df_map1,
+            geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
+            locations="fips",
+            color="avg_score",
+            color_continuous_scale="BuGn",
+            range_color=(df_map1["avg_score"].min(), df_map1["avg_score"].max()),
+            scope="usa",
+            labels={"avg score": "Regional Avg Score"},
+            hover_data={
+                "county": True,
+                "region": True,
+                "mean_score": ':.3f',           # 3 decimal places
+                "region_level_risk": True,
+                "avg_score": ':.3f',            # 3 decimal places
+                "fips": False                   # Hide fips if not needed
+            }
+        )
+       
     fig.update_geos(fitbounds="locations", visible=False)
     fig.update_layout(
         title="📍 Counties colored by Region Average Microplastic Score",
