@@ -202,34 +202,51 @@ elif page == "🗺️ County Risk Map":
 # ================================
 elif page == "🗺️ Regional Risk Map":
     st.title("🗺️ Nebraska Regions — Mean Weighted Score (Standardized)")
-    
+
     st.markdown("This map shows the average standardized microplastic exposure risk per region in Nebraska.")
 
-    # Define NE region geometries (manually or load GeoJSON)
+    # Load regional geometry
     region_geojson_url = "https://raw.githubusercontent.com/andrewraynes/nebraska-regions/main/ne_regions.geojson"
-
-    # Load GeoJSON
     with urlopen(region_geojson_url) as r:
         regions_geo = json.load(r)
 
-    # Create DataFrame with regional summary
-    region_df = pd.DataFrame({
-        "ne_region": ["Mid-Plains", "Metro", "Western", "Central", "Northeast", "Southeast"],
-        "avg_score": [0.146, 0.145, 0.135, 0.130, 0.130, 0.118],
-        "sd_score":  [0.094, 0.020, 0.028, 0.051, 0.059, 0.036],
-        "total_responses": [161, 351, 181, 321, 163, 441],
-        "n_counties": [13, 4, 10, 23, 17, 16]
-    })
+    # Define regions
+    regions = {
+        "Mid-Plains": ['Cherry','Hooker','Thomas','Blaine','Loup','Custer','Logan','McPherson','Lincoln','Keith','Perkins','Chase','Hayes','Frontier','Hitchcock','Red Willow','Dundy'],
+        "Metro": ['Douglas','Sarpy','Washington','Dodge'],
+        "Western": ['Sioux','Dawes','Sheridan','Box Butte','Scotts Bluff','Banner','Kimball','Morrill','Garden','Cheyenne','Deuel','Grant','Arthur'],
+        "Central": ['Valley','Greeley','Sherman','Howard','Merrick','Nance','Polk','Platte','Colfax','Dawson','Buffalo','Hall','Hamilton','Phelps','Kearney','Adams','Clay','Webster','Nuckolls','Franklin','Harlan','Furnas','Gosper'],
+        "Northeast": ['Keya Paha','Boyd','Rock','Brown','Holt','Knox','Cedar','Dixon','Dakota','Antelope','Pierce','Wayne','Thurston','Madison','Stanton','Cuming','Burt','Boone','Garfield','Wheeler'],
+        "Southeast": ['York','Seward','Lancaster','Cass','Otoe','Johnson','Nemaha','Gage','Pawnee','Richardson','Fillmore','Saline','Jefferson','Thayer','Butler','Saunders']
+    }
 
-    # Categorize by thresholds
+    # Load your score data
+    df_scores = df_map  # Adjust to your actual file path
+    df_scores = df_scores[['county', 'mean_score']].dropna()
+
+    # Assign region to each county
+    region_map = {county: region for region, counties in regions.items() for county in counties}
+    df_scores["ne_region"] = df_scores["county"].map(region_map)
+
+    # Group and summarize by region
+    region_df = df_scores.groupby("ne_region").agg(
+        avg_score=("mean_score", "mean"),
+        sd_score=("mean_score", "std"),
+        n_counties=("county", "count")
+    ).reset_index()
+
+    # Compute total responses from another file if needed, or skip for now
+    # region_df["total_responses"] = ...  # Optional if available
+
+    # Categorize risk level
     region_df["Risk_Level"] = region_df["avg_score"].apply(lambda x: categorize(x, THRESHOLDS))
 
-    # For hover tooltips
+    # Rename for hover info
     region_df["Region"] = region_df["ne_region"]
-    region_df["Mean Score"] = region_df["avg_score"]
-    region_df["Std Dev"] = region_df["sd_score"]
+    region_df["Mean Score"] = region_df["avg_score"].round(3)
+    region_df["Std Dev"] = region_df["sd_score"].round(3)
 
-    # Create map
+    # Create choropleth
     fig = px.choropleth(
         region_df,
         geojson=regions_geo,
@@ -239,7 +256,7 @@ elif page == "🗺️ Regional Risk Map":
         color_continuous_scale="YlOrRd",
         range_color=(region_df["avg_score"].min(), region_df["avg_score"].max()),
         labels={"avg_score": "Avg Score"},
-        hover_data=["Region", "Mean Score", "Std Dev", "total_responses", "n_counties"],
+        hover_data=["Region", "Mean Score", "Std Dev", "n_counties"],
     )
 
     fig.update_geos(fitbounds="locations", visible=False)
@@ -255,4 +272,3 @@ elif page == "🗺️ Regional Risk Map":
         f"Cuts — Very Low ≤ {THRESHOLDS['p35']:.3f} < Low ≤ {THRESHOLDS['p70']:.3f} "
         f"< Mid-Low ≤ {THRESHOLDS['p90']:.3f} < Mid ≤ {THRESHOLDS['p99']:.3f} < High."
     )
-
