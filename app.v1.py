@@ -114,10 +114,10 @@ if page == "📊 Individual Risk (Manual Scale)":
     
     # Compute standardized weighted score
     if st.button("🔍 Compute Weighted Score & Category"):
-        user_score_std = float(np.dot(responses_std, W))  # standardized
-        user_cat = categorize(user_score_std)
+        user_score = float(np.dot(responses_std, W))  # standardized
+        user_cat = categorize(user_score)
     
-        st.success(f"🧮 Standardized weighted score: **{user_score_std:.3f}**  →  **{user_cat}**")
+        st.success(f"🧮 Standardized weighted score: **{user_score:.3f}**  →  **{user_cat}**")
         
         # --- Distribution with user's score ---
         hist_x = df_scores[SCORE_COL].dropna()
@@ -193,6 +193,6 @@ elif page == "🗺️ County Risk Map":
     # Legend text for thresholds
     st.caption(
         f"Manual categories: {ORDER}. "
-        f"Cuts — Low ≤ {THRESHOLDS['p35']:.3f} < Mid ≤ {THRESHOLDS['p70']:.3f} "
-        f"< Mid-High ≤ {THRESHOLDS['p90']:.3f} < High ≤ {THRESHOLDS['p99']:.3f} < Very High."
+        f"Cuts — Very Low ≤ {THRESHOLDS['p35']:.3f} < Low ≤ {THRESHOLDS['p70']:.3f} "
+        f"< Mid-Low ≤ {THRESHOLDS['p90']:.3f} < Mid ≤ {THRESHOLDS['p99']:.3f} < High."
     )
