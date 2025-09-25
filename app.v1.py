@@ -47,7 +47,7 @@ SCORE_COL = "Weighted_Score" if "Weighted_Score" in df_scores.columns else (
 # ================================
 # 3) Sidebar
 # ================================
-page = st.sidebar.radio("📑 Select View", ["📊 Individual Risk (Manual Scale)", "🗺️ County Risk Map", "🗺️ Regional Risk Map"])
+page = st.sidebar.radio("📑 Select View", ["📊 Individual Risk (Manual Scale)", "🗺️ County Risk Map", "🗺️ Regional Risk Map", "🖼️ Risk map VS "])
 
 # ================================
 # 4) PAGE 1 — Individual
