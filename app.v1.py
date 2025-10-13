@@ -176,7 +176,7 @@ elif page == "🗺️ County Risk Map":
         "Baseline (Current Conditions)": "mean_score",
         "Scenario 1 — 50% do not use plastic containers in microwave": "Decrease_50",
         "Scenario 2 — 95% do not use plastic containers in microwave": "Decrease_95",
-        "Scenario 3 — 20% use plastic containers ≥5× per day": "Increase_20 ",
+        "Scenario 3 — 20% use plastic containers ≥5× per day": "Increase_20",
         "Scenario 4 — 50% use plastic containers ≥5× per day": "Increase_50",
     }
     score_col = scenario_map[scenario_label]
