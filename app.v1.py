@@ -156,6 +156,7 @@ elif page == "🗺️ County Risk Map":
 
         # --- Load data including what-if columns ---
     df_map = pd.read_csv("county_mean_scores_all_whatif_scenario.csv")
+    df_map.columns = df_map.columns.str.strip()  # remove stray spaces
     df_map["fips"] = df_map["fips"].astype(str).str.zfill(5)
 
     # --- Sidebar: scenario selection ---
@@ -186,35 +187,42 @@ elif page == "🗺️ County Risk Map":
     # --- Filter to Nebraska counties ---
     df_ne = df_map[df_map["fips"].str.startswith("31")].copy()
 
+    # --- Define discrete color mapping for categories ---
+    category_colors = {
+        "Very Low": "#a6cee3",  # light blue
+        "Low": "#1f78b4",       # blue
+        "Mid-Low": "#b2df8a",   # light green
+        "Mid": "#33a02c",       # green
+        "High": "#e31a1c"       # red
+    }
+
     # --- Load US counties GeoJSON ---
     with urlopen("https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json") as r:
         counties_geo = json.load(r)
 
-    # --- Define color scale dynamically ---
-    vmin, vmax = df_ne[score_col].min(), df_ne[score_col].max()
-
+    # --- Choropleth by category ---
     fig = px.choropleth(
         df_ne,
         geojson=counties_geo,
         locations="fips",
-        color=score_col,
+        color="Risk_Level",
         scope="usa",
-        color_continuous_scale="Viridis",
-        range_color=(vmin, vmax),
-        labels={score_col: "Mean Weighted Score"},
+        category_orders={"Risk_Level": ORDER},
+        color_discrete_map=category_colors,
+        labels={"Risk_Level": "Risk Category"},
         hover_data={
             "county": True,
-            "Risk_Level": True,
             score_col: ":.3f",
+            "Risk_Level": True,
             "fips": False
         },
     )
 
-    # --- Update layout ---
     fig.update_geos(fitbounds="locations", visible=False)
     fig.update_layout(
         title=f"📍 Nebraska Counties — {scenario_label}",
-        margin=dict(r=0, t=60, l=0, b=0)
+        margin=dict(r=0, t=60, l=0, b=0),
+        legend_title_text="Risk Category"
     )
 
     st.plotly_chart(fig, use_container_width=True)
@@ -227,8 +235,12 @@ elif page == "🗺️ County Risk Map":
     )
 
     # --- Display small data preview ---
-    with st.expander("📋 View County Scores"):
-        st.dataframe(df_ne[["county", "fips", score_col, "Risk_Level"]].sort_values(score_col, ascending=False))
+    with st.expander("📋 View County Scores and Categories"):
+        st.dataframe(
+            df_ne[["county", "fips", score_col, "Risk_Level"]]
+            .sort_values(score_col, ascending=False)
+            .rename(columns={score_col: f"{score_col} (Score)"})
+        )
 
     
 
