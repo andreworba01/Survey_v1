@@ -334,19 +334,16 @@ elif page == "🖼️ Risk map VS":
     import streamlit.components.v1 as components
 
     st.title("🖼️ Risk Map Comparison — Baseline vs Scenario")
-
     st.markdown(
-        """
-        Slide the arrow left or right to compare **Baseline** and **Scenario** maps.
-        This interactive slider lets you visualize differences in county-level risk between two conditions.
-        """
+        "Slide the arrow left or right to compare **Baseline** and **Scenario** maps. "
+        "This interactive slider lets you visualize differences in county-level risk."
     )
 
-    # --- Image file paths ---
+    # --- File paths ---
     map1_path = "Base_line.png"
     map2_path = "Cherry.png"
 
-    # --- Encode both images as base64 ---
+    # --- Encode images as base64 ---
     def encode_image(path):
         with open(path, "rb") as f:
             return base64.b64encode(f.read()).decode("utf-8")
@@ -354,33 +351,35 @@ elif page == "🖼️ Risk map VS":
     map1_b64 = encode_image(map1_path)
     map2_b64 = encode_image(map2_path)
 
-    # --- Juxtapose HTML slider ---
+    # --- Safe HTML (triple quotes + no unmatched braces) ---
     juxtapose_html = f"""
-    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
-    <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+    <html>
+      <head>
+        <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+        <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+      </head>
+      <body style="margin:0; background-color:white;">
+        <div id="juxtapose-container" style="width:100%;max-width:1000px;margin:auto;">
+          <div class="juxtapose" data-mode="horizontal"></div>
+        </div>
 
-    <div id="juxtapose-container" style="width:100%;max-width:1000px;margin:auto;">
-      <div class="juxtapose" data-mode="horizontal">
-        <img src="data:image/png;base64,{map1_b64}" alt="Baseline Map" />
-        <img src="data:image/png;base64,{map2_b64}" alt="Scenario Map" />
-      </div>
-    </div>
-
-    <script>
-      window.addEventListener('load', function() {{
-          new juxtapose.JXSlider('#juxtapose-container', [
-              {{ src: 'data:image/png;base64,{map1_b64}', label: 'Baseline' }},
-              {{ src: 'data:image/png;base64,{map2_b64}', label: 'Cherry Scenario' }}
-          ], {{
-              animate: true,
-              showLabels: true,
-              showCredits: false,
-              startingPosition: "50%",
-              makeResponsive: true
+        <script>
+          window.addEventListener('load', function() {{
+              new juxtapose.JXSlider('#juxtapose-container', [
+                  {{ src: 'data:image/png;base64,{map1_b64}', label: 'Baseline' }},
+                  {{ src: 'data:image/png;base64,{map2_b64}', label: 'Cherry Scenario' }}
+              ], {{
+                  animate: true,
+                  showLabels: true,
+                  showCredits: false,
+                  startingPosition: "50%",
+                  makeResponsive: true
+              }});
           }});
-      }});
-    </script>
+        </script>
+      </body>
+    </html>
     """
 
-    # --- Render slider in Streamlit ---
+    # --- Render in Streamlit ---
     components.html(juxtapose_html, height=700, scrolling=False)
