@@ -382,4 +382,4 @@ elif page == "🖼️ Risk map VS":
     """
 
     # --- Render in Streamlit ---
-    components.html(juxtapose_html, height=1200, scrolling=False)
+    components.html(juxtapose_html, height=1800, scrolling=False)
