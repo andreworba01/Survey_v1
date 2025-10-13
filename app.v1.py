@@ -324,3 +324,55 @@ elif page == "🗺️ Regional Risk Map":
         "sd score": "Std Dev",
         "Total Responses": "n_counties"
     }))
+
+
+# ================================
+# PAGE 4 — 🖼️ Risk map VS
+# ================================
+elif page == "🖼️ Risk map VS":
+    import streamlit.components.v1 as components
+
+    st.title("🖼️ Risk Map Comparison — Baseline vs Scenario")
+
+    st.markdown(
+        """
+        Slide the arrow left or right to compare **baseline** and **scenario** maps.
+        This interactive slider lets you visualize differences in county-level risk between two conditions.
+        """
+    )
+
+    # Local file paths (update if needed)
+    map1_path = "Base_line.png"
+    map2_path = "Cherry.png"
+
+    # Juxtapose HTML slider
+    juxtapose_html = f"""
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+    <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+
+    <div id="juxtapose-container" style="width:100%;max-width:1000px;margin:auto;">
+      <div class="juxtapose" data-mode="horizontal">
+        <img src="data:image/png;base64,{open(map1_path, "rb").read().encode("base64").decode()}" alt="Baseline Map" />
+        <img src="data:image/png;base64,{open(map2_path, "rb").read().encode("base64").decode()}" alt="Scenario Map" />
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener('load', function() {{
+          new juxtapose.JXSlider('#juxtapose-container', [
+              {{ src: 'data:image/png;base64,{open(map1_path, "rb").read().encode("base64").decode()}', label: 'Baseline' }},
+              {{ src: 'data:image/png;base64,{open(map2_path, "rb").read().encode("base64").decode()}', label: 'Cherry Scenario' }}
+          ], {{
+              animate: true,
+              showLabels: true,
+              showCredits: false,
+              startingPosition: "50%",
+              makeResponsive: true
+          }});
+      }});
+    </script>
+    """
+
+    # Render the component in Streamlit
+    components.html(juxtapose_html, height=700, scrolling=False)
+
