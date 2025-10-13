@@ -330,38 +330,47 @@ elif page == "🗺️ Regional Risk Map":
 # PAGE 4 — 🖼️ Risk map VS
 # ================================
 elif page == "🖼️ Risk map VS":
+    import base64
     import streamlit.components.v1 as components
 
     st.title("🖼️ Risk Map Comparison — Baseline vs Scenario")
 
     st.markdown(
         """
-        Slide the arrow left or right to compare **baseline** and **scenario** maps.
+        Slide the arrow left or right to compare **Baseline** and **Scenario** maps.
         This interactive slider lets you visualize differences in county-level risk between two conditions.
         """
     )
 
-    # Local file paths (update if needed)
+    # --- Image file paths ---
     map1_path = "Base_line.png"
     map2_path = "Cherry.png"
 
-    # Juxtapose HTML slider
+    # --- Encode both images as base64 ---
+    def encode_image(path):
+        with open(path, "rb") as f:
+            return base64.b64encode(f.read()).decode("utf-8")
+
+    map1_b64 = encode_image(map1_path)
+    map2_b64 = encode_image(map2_path)
+
+    # --- Juxtapose HTML slider ---
     juxtapose_html = f"""
     <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
     <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
 
     <div id="juxtapose-container" style="width:100%;max-width:1000px;margin:auto;">
       <div class="juxtapose" data-mode="horizontal">
-        <img src="data:image/png;base64,{open(map1_path, "rb").read().encode("base64").decode()}" alt="Baseline Map" />
-        <img src="data:image/png;base64,{open(map2_path, "rb").read().encode("base64").decode()}" alt="Scenario Map" />
+        <img src="data:image/png;base64,{map1_b64}" alt="Baseline Map" />
+        <img src="data:image/png;base64,{map2_b64}" alt="Scenario Map" />
       </div>
     </div>
 
     <script>
       window.addEventListener('load', function() {{
           new juxtapose.JXSlider('#juxtapose-container', [
-              {{ src: 'data:image/png;base64,{open(map1_path, "rb").read().encode("base64").decode()}', label: 'Baseline' }},
-              {{ src: 'data:image/png;base64,{open(map2_path, "rb").read().encode("base64").decode()}', label: 'Cherry Scenario' }}
+              {{ src: 'data:image/png;base64,{map1_b64}', label: 'Baseline' }},
+              {{ src: 'data:image/png;base64,{map2_b64}', label: 'Cherry Scenario' }}
           ], {{
               animate: true,
               showLabels: true,
@@ -373,6 +382,5 @@ elif page == "🖼️ Risk map VS":
     </script>
     """
 
-    # Render the component in Streamlit
-    components.html(juxtapose_html, height=700, scrolling=False)
-
+    # --- Render slider in Streamlit ---
+    components.html(juxtapose_html, height_
