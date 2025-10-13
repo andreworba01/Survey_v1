@@ -154,48 +154,83 @@ if page == "📊 Individual Risk (Manual Scale)":
 elif page == "🗺️ County Risk Map":
     st.title("🗺️ Nebraska County — Mean Weighted Score (Manual Scale)")
 
-    # Risk level per county using the same manual thresholds
-    def assign_risk(score):
-        return categorize(score, THRESHOLDS)
-
-    df_map = df_map.copy()
+        # --- Load data including what-if columns ---
+    df_map = pd.read_csv("county_mean_scores_all_whatif_scenario.csv")
     df_map["fips"] = df_map["fips"].astype(str).str.zfill(5)
-    df_map["Risk_Level"] = df_map["mean_score"].apply(assign_risk)
 
-    # Filter to Nebraska counties (FIPS starts with '31')
+    # --- Sidebar: scenario selection ---
+    scenario_label = st.sidebar.selectbox(
+        "🔮 Select What-If Scenario",
+        [
+            "Baseline (Current Conditions)",
+            "Scenario 1 — 50% do not use plastic containers in microwave",
+            "Scenario 2 — 85% do not use plastic containers in microwave",
+            "Scenario 3 — 20% use plastic containers ≥5× per day",
+            "Scenario 4 — 50% use plastic containers ≥5× per day"
+        ],
+    )
+
+    # --- Map scenario label to column ---
+    scenario_map = {
+        "Baseline (Current Conditions)": "mean_score",
+        "Scenario 1 — 50% do not use plastic containers in microwave": "Decrease_50",
+        "Scenario 2 — 85% do not use plastic containers in microwave": "Decrease_95",
+        "Scenario 3 — 20% use plastic containers ≥5× per day": "Increase_20",
+        "Scenario 4 — 50% use plastic containers ≥5× per day": "Increase_50",
+    }
+    score_col = scenario_map[scenario_label]
+
+    # --- Apply manual categorization for selected column ---
+    df_map["Risk_Level"] = df_map[score_col].apply(lambda x: categorize(x, THRESHOLDS))
+
+    # --- Filter to Nebraska counties ---
     df_ne = df_map[df_map["fips"].str.startswith("31")].copy()
 
-    # GeoJSON for US counties
+    # --- Load US counties GeoJSON ---
     with urlopen("https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json") as r:
         counties_geo = json.load(r)
 
-    # dynamic color range
-    vmin, vmax = df_ne["mean_score"].min(), df_ne["mean_score"].max()
+    # --- Define color scale dynamically ---
+    vmin, vmax = df_ne[score_col].min(), df_ne[score_col].max()
 
     fig = px.choropleth(
         df_ne,
         geojson=counties_geo,
         locations="fips",
-        color="mean_score",
+        color=score_col,
         scope="usa",
         color_continuous_scale="Viridis",
         range_color=(vmin, vmax),
-        labels={"mean_score": "Mean Weighted Score"},
-        hover_data={"county": True, "Risk_Level": True, "mean_score": ":.3f", "fips": False},
+        labels={score_col: "Mean Weighted Score"},
+        hover_data={
+            "county": True,
+            "Risk_Level": True,
+            score_col: ":.3f",
+            "fips": False
+        },
     )
+
+    # --- Update layout ---
     fig.update_geos(fitbounds="locations", visible=False)
     fig.update_layout(
-        title="📍 Nebraska Counties — Mean Weighted Score",
-        margin=dict(r=0, t=40, l=0, b=0)
+        title=f"📍 Nebraska Counties — {scenario_label}",
+        margin=dict(r=0, t=60, l=0, b=0)
     )
+
     st.plotly_chart(fig, use_container_width=True)
 
-    # Legend text for thresholds
+    # --- Legend text ---
     st.caption(
         f"Manual categories: {ORDER}. "
         f"Cuts — Very Low ≤ {THRESHOLDS['p35']:.3f} < Low ≤ {THRESHOLDS['p70']:.3f} "
         f"< Mid-Low ≤ {THRESHOLDS['p90']:.3f} < Mid ≤ {THRESHOLDS['p99']:.3f} < High."
     )
+
+    # --- Display small data preview ---
+    with st.expander("📋 View County Scores"):
+        st.dataframe(df_ne[["county", "fips", score_col, "Risk_Level"]].sort_values(score_col, ascending=False))
+
+    
 
 # ================================
 # 6) PAGE 3 — Regional Map
