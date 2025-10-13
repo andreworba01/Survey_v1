@@ -340,8 +340,8 @@ elif page == "🖼️ Risk map VS":
     )
 
     # --- File paths ---
-    map1_path = "Base_line.png"
-    map2_path = "Cherry.png"
+    map1_path = "Base.png"
+    map2_path = "Whatif.png"
 
     # --- Encode images as base64 ---
     def encode_image(path):
@@ -359,15 +359,15 @@ elif page == "🖼️ Risk map VS":
         <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
       </head>
       <body style="margin:0; background-color:white;">
-        <div id="juxtapose-container" style="width:100%;max-width:1000px;margin:auto;">
+        <div id="juxtapose-container" style="width:100%;max-width:2000px;margin:auto;">
           <div class="juxtapose" data-mode="horizontal"></div>
         </div>
 
         <script>
           window.addEventListener('load', function() {{
               new juxtapose.JXSlider('#juxtapose-container', [
-                  {{ src: 'data:image/png;base64,{map1_b64}', label: 'Baseline' }},
-                  {{ src: 'data:image/png;base64,{map2_b64}', label: 'Cherry Scenario' }}
+                  {{ src: 'data:image/png;base64,{map1_b64}', label: 'Baseline Scenario' }},
+                  {{ src: 'data:image/png;base64,{map2_b64}', label: '50% use plastic containers ≥5× per day' }}
               ], {{
                   animate: true,
                   showLabels: true,
