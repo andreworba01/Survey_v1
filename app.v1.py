@@ -383,4 +383,4 @@ elif page == "🖼️ Risk map VS":
     """
 
     # --- Render slider in Streamlit ---
-    components.html(juxtapose_html, height_
+    components.html(juxtapose_html, height=700, scrolling=False)
