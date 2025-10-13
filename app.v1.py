@@ -182,32 +182,39 @@ elif page == "🗺️ County Risk Map":
     score_col = scenario_map[scenario_label]
 
     # --- Apply manual categorization for selected column ---
-    df_map["Risk_Level"] = df_map[score_col].apply(lambda x: categorize(x, THRESHOLDS))
+    df_map["Risk_Level"] = df_map[score_col].apply(lambda x: categorize(x, THRESHOLDS) if pd.notna(x) else np.nan)
 
     # --- Filter to Nebraska counties ---
     df_ne = df_map[df_map["fips"].str.startswith("31")].copy()
 
-    # --- Define discrete color mapping for categories ---
+    # --- Define Viridis-like discrete color mapping (plus NA) ---
     category_colors = {
-        "Very Low": "#a6cee3",  # light blue
-        "Low": "#1f78b4",       # blue
-        "Mid-Low": "#b2df8a",   # light green
-        "Mid": "#33a02c",       # green
-        "High": "#e31a1c"       # red
+        "Very Low": "#440154",  # deep purple
+        "Low": "#31688e",       # blue
+        "Mid-Low": "#35b779",   # green
+        "Mid": "#fde725",       # yellow
+        "High": "#ff8c00",      # orange
+        "NA": "#d3d3d3"         # light gray for missing
     }
+
+    # --- Replace NaNs with "NA" category ---
+    df_ne["Risk_Level"] = df_ne["Risk_Level"].fillna("NA")
+
+    # --- Ensure proper category order including NA ---
+    order_with_na = ORDER + ["NA"]
 
     # --- Load US counties GeoJSON ---
     with urlopen("https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json") as r:
         counties_geo = json.load(r)
 
-    # --- Choropleth by category ---
+    # --- Choropleth by category (Viridis-like palette) ---
     fig = px.choropleth(
         df_ne,
         geojson=counties_geo,
         locations="fips",
         color="Risk_Level",
         scope="usa",
-        category_orders={"Risk_Level": ORDER},
+        category_orders={"Risk_Level": order_with_na},
         color_discrete_map=category_colors,
         labels={"Risk_Level": "Risk Category"},
         hover_data={
@@ -218,6 +225,7 @@ elif page == "🗺️ County Risk Map":
         },
     )
 
+    # --- Layout ---
     fig.update_geos(fitbounds="locations", visible=False)
     fig.update_layout(
         title=f"📍 Nebraska Counties — {scenario_label}",
@@ -225,6 +233,7 @@ elif page == "🗺️ County Risk Map":
         legend_title_text="Risk Category"
     )
 
+    # --- Show map ---
     st.plotly_chart(fig, use_container_width=True)
 
     # --- Legend text ---
