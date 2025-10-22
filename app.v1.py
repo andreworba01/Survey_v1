@@ -394,7 +394,7 @@ st.markdown(
     <div style="font-size:0.8em; color:gray; text-align:center;">
         We thank <a href="https://www.1000minds.com" target="_blank">1000minds</a> for allowing us to use their software 
         for the expert elicitation process that resulted in our ranking.<br><br>
-        <strong>Please cite:</strong><br>
+        <strong>Please Refer to:</strong><br>
         1000minds Ltd. (2025). <em>1000minds decision-making and conjoint analysis software</em> [Computer software]. 
         <a href="https://www.1000minds.com" target="_blank">https://www.1000minds.com</a><br>
         Hansen, P., & Ombler, F. (2008). 
