@@ -383,3 +383,24 @@ elif page == "🖼️ Risk map VS":
 
     # --- Render in Streamlit ---
     components.html(juxtapose_html, height=1800, scrolling=False)
+
+
+# ================================
+# 7) Global Footnote (all pages)
+# ================================
+st.markdown(
+    """
+    <hr style="margin-top:40px;margin-bottom:10px;">
+    <div style="font-size:0.8em; color:gray; text-align:center;">
+        We thank <a href="https://www.1000minds.com" target="_blank">1000minds</a> for allowing us to use their software 
+        for the expert elicitation process that resulted in our ranking.<br><br>
+        <strong>Please cite:</strong><br>
+        1000minds Ltd. (2025). <em>1000minds decision-making and conjoint analysis software</em> [Computer software]. 
+        <a href="https://www.1000minds.com" target="_blank">https://www.1000minds.com</a><br>
+        Hansen, P., & Ombler, F. (2008). 
+        A new method for scoring additive multi-attribute value models using pairwise rankings of alternatives. 
+        <em>Journal of Multi-Criteria Decision Analysis, 15</em>(3–4), 87–107.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
